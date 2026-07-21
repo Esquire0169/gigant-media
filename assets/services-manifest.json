@@ -1,0 +1,106 @@
+[
+  {
+    "num": 1,
+    "name": "Вывески",
+    "slug": "signs",
+    "file": "assets/services/01-signs.webp",
+    "desc": "Объёмные буквы, световые короба и фасадные конструкции с монтажом.",
+    "href": "services/signs.html"
+  },
+  {
+    "num": 2,
+    "name": "ПОСМ",
+    "slug": "posm",
+    "file": "assets/services/02-posm.webp",
+    "desc": "Шелфтокеры, стопперы, диспенсеры и материалы для точки продаж.",
+    "href": "services/wide-format.html"
+  },
+  {
+    "num": 3,
+    "name": "Придорожная реклама",
+    "slug": "roadside",
+    "file": "assets/services/03-roadside.webp",
+    "desc": "Щиты, конструкции и носители вдоль транспортных артерий.",
+    "href": "services/wide-format.html"
+  },
+  {
+    "num": 4,
+    "name": "Мебель",
+    "slug": "furniture",
+    "file": "assets/services/04-furniture.webp",
+    "desc": "Торговая и выставочная мебель под бренд и задачу объекта.",
+    "href": "services/wide-format.html"
+  },
+  {
+    "num": 5,
+    "name": "Воблеры",
+    "slug": "wobblers",
+    "file": "assets/services/05-wobblers.webp",
+    "desc": "POS-элементы, которые привлекают внимание к товару на полке.",
+    "href": "services/wide-format.html"
+  },
+  {
+    "num": 6,
+    "name": "Мобильные стенды",
+    "slug": "mobile-stands",
+    "file": "assets/services/06-mobile-stands.webp",
+    "desc": "Мобильные конструкции для акций, форумов и выездных мероприятий.",
+    "href": "services/wide-format.html"
+  },
+  {
+    "num": 7,
+    "name": "Декор",
+    "slug": "decor",
+    "file": "assets/services/07-decor.webp",
+    "desc": "Декоративные решения для интерьеров, витрин и бренд-зон.",
+    "href": "services/wide-format.html"
+  },
+  {
+    "num": 8,
+    "name": "Порошковая покраска",
+    "slug": "powder-coating",
+    "file": "assets/services/08-powder-coating.webp",
+    "desc": "Стойкое покрытие металлоконструкций и рекламных изделий.",
+    "href": "services/wide-format.html"
+  },
+  {
+    "num": 9,
+    "name": "Комплексное оформление",
+    "slug": "complex",
+    "file": "assets/services/09-complex.webp",
+    "desc": "Полный цикл оформления объекта: от концепции до монтажа.",
+    "href": "services/wide-format.html"
+  },
+  {
+    "num": 10,
+    "name": "Рекламная оклейка",
+    "slug": "wrapping",
+    "file": "assets/services/10-wrapping.webp",
+    "desc": "Брендирование транспорта, витрин и поверхностей плёнкой.",
+    "href": "services/wide-format.html"
+  },
+  {
+    "num": 11,
+    "name": "Широкоформатная печать",
+    "slug": "wide-format",
+    "file": "assets/services/11-wide-format.webp",
+    "desc": "Баннеры, бренд-зоны, интерьерная и наружная графика.",
+    "href": "services/wide-format.html"
+  },
+  {
+    "num": 12,
+    "name": "Сувениры и награды",
+    "slug": "souvenirs",
+    "file": "assets/services/12-souvenirs.webp",
+    "desc": "Корпоративные подарки, награды и сувенирная продукция.",
+    "href": "services/wide-format.html"
+  },
+  {
+    "num": 13,
+    "name": "Выставочные стенды",
+    "slug": "exhibition",
+    "file": "assets/services/13-exhibition.webp",
+    "desc": "Выставочные стенды и конструкции под ключ.",
+    "href": "services/wide-format.html"
+  }
+]

@@ -1,0 +1,60 @@
+:root {
+  /* Color */
+  --color-primary: #acd03a;
+  --color-primary-dark: #89a337;
+  --color-primary-soft: rgba(172, 208, 58, 0.14);
+  --color-bg: #f7f8f4;
+  --color-bg-elevated: #eef1e8;
+  --color-surface: #ffffff;
+  --color-ink: #111827;
+  --color-muted: #6b7280;
+  --color-line: #e5e7eb;
+  --color-line-strong: #d1d5db;
+  --color-success: #16a34a;
+  --color-warning: #f59e0b;
+  --color-error: #dc2626;
+  --color-ink-inverse: #f7f8f4;
+  --color-surface-dark: #1a1f16;
+
+  /* Radius */
+  --radius-sm: 12px;
+  --radius-md: 20px;
+  --radius-lg: 28px;
+  --radius-xl: 40px;
+  --radius-card: 24px;
+  --radius-button: 999px;
+  --radius-input: 16px;
+
+  /* Shadow */
+  --shadow-card: 0 10px 30px rgba(17, 24, 39, 0.08);
+  --shadow-hover: 0 16px 40px rgba(17, 24, 39, 0.12);
+  --shadow-soft: 0 4px 16px rgba(17, 24, 39, 0.06);
+
+  /* Motion */
+  --ease-standard: cubic-bezier(0.22, 1, 0.36, 1);
+  --dur-fast: 180ms;
+  --dur-base: 280ms;
+  --dur-slow: 480ms;
+
+  /* Layout */
+  --container: 1200px;
+  --container-wide: 1360px;
+  --gutter: 24px;
+  --section-y: 104px;
+  --header-h: 80px;
+
+  /* Type */
+  --font: "Manrope", Inter, Arial, sans-serif;
+  --fw-regular: 400;
+  --fw-medium: 500;
+  --fw-semibold: 600;
+  --fw-bold: 700;
+}
+
+@media (max-width: 768px) {
+  :root {
+    --gutter: 16px;
+    --section-y: 72px;
+    --header-h: 68px;
+  }
+}
