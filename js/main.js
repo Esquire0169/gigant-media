@@ -263,4 +263,48 @@
     rowTrack.dataset.marqueeReady = "1";
   });
 
+  /* FAQ accordion: smooth open/close + icon state */
+  document.querySelectorAll(".faq-item").forEach((item) => {
+    const panel = item.querySelector(".faq-item__panel");
+    const inner = item.querySelector(".faq-item__panel-inner");
+    if (!panel || !inner) return;
+
+    const setOpen = (open) => {
+      if (open) {
+        panel.style.gridTemplateRows = "1fr";
+        item.setAttribute("open", "");
+      } else {
+        panel.style.gridTemplateRows = "0fr";
+        window.setTimeout(() => {
+          if (panel.style.gridTemplateRows === "0fr") item.removeAttribute("open");
+        }, 400);
+      }
+    };
+
+    if (item.open) panel.style.gridTemplateRows = "1fr";
+    else panel.style.gridTemplateRows = "0fr";
+
+    item.addEventListener("click", (e) => {
+      const summary = e.target.closest("summary");
+      if (!summary || !item.contains(summary)) return;
+      e.preventDefault();
+      const willOpen = !item.hasAttribute("open") || panel.style.gridTemplateRows === "0fr";
+      if (willOpen) {
+        document.querySelectorAll(".faq-item[open]").forEach((other) => {
+          if (other === item) return;
+          const otherPanel = other.querySelector(".faq-item__panel");
+          if (otherPanel) otherPanel.style.gridTemplateRows = "0fr";
+          window.setTimeout(() => {
+            if (otherPanel && otherPanel.style.gridTemplateRows === "0fr") {
+              other.removeAttribute("open");
+            }
+          }, 400);
+        });
+        setOpen(true);
+      } else {
+        setOpen(false);
+      }
+    });
+  });
+
 })();

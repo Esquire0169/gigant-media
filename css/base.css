@@ -160,6 +160,10 @@ ul, ol {
 .reveal-stagger > .reveal:nth-child(4) { transition-delay: 210ms; }
 .reveal-stagger > .reveal:nth-child(5) { transition-delay: 280ms; }
 .reveal-stagger > .reveal:nth-child(6) { transition-delay: 350ms; }
+.reveal-stagger > .reveal:nth-child(7) { transition-delay: 420ms; }
+.reveal-stagger > .reveal:nth-child(8) { transition-delay: 490ms; }
+.reveal-stagger > .reveal:nth-child(9) { transition-delay: 560ms; }
+.reveal-stagger > .reveal:nth-child(10) { transition-delay: 630ms; }
 
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
