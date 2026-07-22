@@ -399,7 +399,14 @@ a.case-card:hover {
 .mosaic__cell,
 .fab-call,
 .topbar__social a,
-.about-regions__list--tiles li {
+.about-regions__list--tiles li,
+.audience-card,
+.service-card,
+.services-all,
+.services-all__list a,
+.contact-media,
+.trust-strip li,
+.workshop-grid__item {
   border-radius: 0 !important;
 }
 

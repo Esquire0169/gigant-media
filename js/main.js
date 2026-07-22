@@ -160,6 +160,8 @@
       const name = form.querySelector('[name="name"]')?.value.trim() || "";
       const phone = form.querySelector('[name="phone"]')?.value.trim() || "";
       const task = form.querySelector('[name="task"]')?.value.trim() || "";
+      const deadline = form.querySelector('[name="deadline"]')?.value.trim() || "";
+      const message = form.querySelector('[name="message"]')?.value.trim() || "";
       const phoneOk = phone.replace(/\D/g, "").length >= 9;
       let valid = true;
 
@@ -180,50 +182,59 @@
       const btn = form.querySelector('button[type="submit"]');
       const success = form.querySelector("[data-form-success]");
       const successMsg = success?.querySelector("p");
+      const waLink = success?.querySelector('a[href*="wa.me"]');
       if (btn) {
         btn.disabled = true;
         btn.textContent = tt("form.sending");
       }
 
+      const taskLabel =
+        form.querySelector('[name="task"] option:checked')?.textContent?.trim() || task;
+      const waText = [
+        "Заявка GIGANT MEDIA",
+        `Имя: ${name}`,
+        `Телефон: ${phone}`,
+        `Задача: ${taskLabel}`,
+        deadline ? `Срок: ${deadline}` : "",
+        message ? `Комментарий: ${message}` : "",
+      ]
+        .filter(Boolean)
+        .join("\n");
+      const waUrl = `https://wa.me/998908056692?text=${encodeURIComponent(waText)}`;
+
       setTimeout(() => {
-        form.reset();
         if (success) {
           if (successMsg) successMsg.textContent = tt("form.success");
+          if (waLink) waLink.setAttribute("href", waUrl);
           success.hidden = false;
         }
         if (btn) {
           btn.disabled = false;
           btn.textContent = tt("form.submit");
         }
-      }, 500);
+        // Open WhatsApp with prefilled brief (real handoff)
+        window.open(waUrl, "_blank", "noopener");
+        form.reset();
+      }, 400);
     });
   });
 
   /* Sticky mobile CTA */
   const stickyCta = document.querySelector("[data-sticky-cta]");
   const contactsSection = document.querySelector("#contacts");
-  const fabCall = document.querySelector("[data-fab-call]");
-  if (stickyCta || fabCall) {
-    const updateChromeCtas = () => {
+  if (stickyCta) {
+    const updateSticky = () => {
       const scrolled = window.scrollY > 420;
       const nearContacts = contactsSection
         ? contactsSection.getBoundingClientRect().top < window.innerHeight * 0.72
         : false;
-      const mobile = window.matchMedia("(max-width: 720px)").matches;
-      if (stickyCta) {
-        const showSticky = scrolled && !nearContacts && mobile;
-        stickyCta.hidden = !showSticky;
-        document.body.classList.toggle("has-sticky-cta", showSticky);
-      }
-      if (fabCall) {
-        const showFab = scrolled && !nearContacts && !mobile;
-        fabCall.classList.toggle("is-hidden", !showFab);
-        fabCall.toggleAttribute("hidden", !showFab);
-      }
+      const show = scrolled && !nearContacts && window.matchMedia("(max-width: 720px)").matches;
+      stickyCta.hidden = !show;
+      document.body.classList.toggle("has-sticky-cta", show);
     };
-    updateChromeCtas();
-    window.addEventListener("scroll", updateChromeCtas, { passive: true });
-    window.addEventListener("resize", updateChromeCtas);
+    updateSticky();
+    window.addEventListener("scroll", updateSticky, { passive: true });
+    window.addEventListener("resize", updateSticky);
   }
 
   /* Services carousel: drag + arrows + infinite loop */
