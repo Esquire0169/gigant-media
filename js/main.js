@@ -107,23 +107,69 @@
     update();
   }
 
-  /* Form UX: single primary CTA feedback */
+  /* Form validation + i18n-aware feedback */
   document.querySelectorAll("form[data-lead-form]").forEach((form) => {
+    const clearErrors = () => {
+      form.querySelectorAll(".field--error").forEach((f) => f.classList.remove("field--error"));
+      form.querySelectorAll("[data-error-for]").forEach((el) => {
+        el.hidden = true;
+        el.textContent = "";
+      });
+    };
+
+    const showError = (name, message) => {
+      const input = form.querySelector(`[name="${name}"]`);
+      const field = input?.closest(".field");
+      const err = form.querySelector(`[data-error-for="${name}"]`);
+      field?.classList.add("field--error");
+      if (err) {
+        err.textContent = message;
+        err.hidden = false;
+      }
+    };
+
+    const tt = (key) => window.GM_I18N?.t?.(key) || key;
+
     form.addEventListener("submit", (e) => {
       e.preventDefault();
+      clearErrors();
+
+      const name = form.querySelector('[name="name"]')?.value.trim() || "";
+      const phone = form.querySelector('[name="phone"]')?.value.trim() || "";
+      const phoneOk = phone.replace(/\D/g, "").length >= 9;
+      let valid = true;
+
+      if (name.length < 2) {
+        showError("name", tt("form.errorName"));
+        valid = false;
+      }
+      if (!phoneOk) {
+        showError("phone", tt("form.errorPhone"));
+        valid = false;
+      }
+      if (!valid) return;
+
       const btn = form.querySelector('button[type="submit"]');
-      const original = btn?.textContent;
+      const success = form.querySelector("[data-form-success]");
       if (btn) {
         btn.disabled = true;
-        btn.textContent = "Заявка отправлена";
+        btn.textContent = tt("form.sending");
       }
-      form.reset();
+
       setTimeout(() => {
+        form.reset();
+        if (success) {
+          success.hidden = false;
+          success.textContent = tt("form.success");
+        }
         if (btn) {
           btn.disabled = false;
-          btn.textContent = original || "Отправить";
+          btn.textContent = tt("form.submit");
         }
-      }, 2200);
+        setTimeout(() => {
+          if (success) success.hidden = true;
+        }, 3200);
+      }, 500);
     });
   });
 

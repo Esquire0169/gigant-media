@@ -303,8 +303,20 @@
 .service-slide > p {
   color: var(--color-muted);
   font-size: 14px;
-  margin-bottom: 16px;
+  margin-bottom: 10px;
   flex: 1;
+}
+
+.service-slide__benefit {
+  display: inline-flex;
+  align-self: flex-start;
+  margin-bottom: 14px;
+  padding: 6px 10px;
+  border-radius: 999px;
+  background: var(--color-primary-soft);
+  color: var(--color-primary-dark);
+  font-size: 12px;
+  font-weight: 700;
 }
 
 .service-slide__media {
@@ -932,6 +944,103 @@
   background: #fff;
   z-index: 3;
   box-shadow: 0 0 12px rgba(0, 0, 0, 0.25);
+}
+
+/* ========== FAQ ========== */
+.faq {
+  display: grid;
+  gap: 12px;
+  max-width: 860px;
+}
+
+.faq-item {
+  background: var(--color-surface);
+  border: 1px solid var(--color-line);
+  border-radius: var(--radius-md);
+  padding: 18px 22px;
+  box-shadow: var(--shadow-soft);
+}
+
+.faq-item summary {
+  cursor: pointer;
+  font-weight: var(--fw-semibold);
+  list-style: none;
+  position: relative;
+  padding-right: 28px;
+}
+
+.faq-item summary::-webkit-details-marker { display: none; }
+
+.faq-item summary::after {
+  content: "+";
+  position: absolute;
+  right: 0;
+  top: 0;
+  color: var(--color-primary-dark);
+  font-size: 20px;
+  line-height: 1;
+}
+
+.faq-item[open] summary::after { content: "–"; }
+
+.faq-item[open] summary { margin-bottom: 10px; }
+
+.faq-item p {
+  color: var(--color-muted);
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+.quick-contacts {
+  margin-top: 28px;
+}
+
+.quick-contacts__label {
+  font-size: 12px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: rgba(247, 248, 244, 0.5);
+  margin-bottom: 10px;
+}
+
+.quick-contacts__row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.quick-btn {
+  display: inline-flex;
+  align-items: center;
+  height: 40px;
+  padding: 0 14px;
+  border-radius: 999px;
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  background: rgba(255, 255, 255, 0.06);
+  color: #fff;
+  font-size: 13px;
+  font-weight: 600;
+  transition: background var(--dur-fast) var(--ease-standard), border-color var(--dur-fast) var(--ease-standard);
+}
+
+.quick-btn:hover {
+  background: rgba(172, 208, 58, 0.2);
+  border-color: rgba(172, 208, 58, 0.55);
+}
+
+.cta-band .field--error input,
+.cta-band .field--error textarea {
+  border-color: #f87171;
+}
+
+.cta-band .field__error {
+  color: #fecaca;
+}
+
+.form-success {
+  margin-top: 12px;
+  color: var(--color-primary);
+  font-weight: 600;
 }
 
 /* Responsive */

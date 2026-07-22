@@ -4,7 +4,18 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>GIGANT MEDIA — Рекламное производство полного цикла</title>
-  <meta name="description" content="GIGANT MEDIA — рекламно-производственная компания полного цикла в Узбекистане: вывески, ПОСМ, широкоформатная печать, мебель, стенды и комплексное оформление. Более 15 лет на рынке." />
+  <meta name="description" content="GIGANT MEDIA — рекламно-производственная компания полного цикла в Узбекистане: вывески, ПОСМ, печать, мебель, стенды. 15+ лет, своё производство." />
+  <meta name="theme-color" content="#ACD03A" />
+  <link rel="canonical" href="https://esquire0169.github.io/gigant-media/" />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="GIGANT MEDIA" />
+  <meta property="og:title" content="GIGANT MEDIA — Рекламное производство полного цикла" />
+  <meta property="og:description" content="Полный цикл рекламного производства в Узбекистане: дизайн, производство, монтаж." />
+  <meta property="og:url" content="https://esquire0169.github.io/gigant-media/" />
+  <meta property="og:image" content="https://esquire0169.github.io/gigant-media/assets/images/hero.webp" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="GIGANT MEDIA — Full-cycle advertising production" />
+  <meta name="twitter:description" content="Design, production and installation across Uzbekistan." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet" />
@@ -14,211 +25,221 @@
   <link rel="stylesheet" href="css/pages.css" />
 </head>
 <body>
+  <a class="skip-link" href="#home">Skip to content</a>
   <header class="site-header">
     <div class="container container--wide site-header__inner">
-      <a class="logo" href="index.html" aria-label="GIGANT MEDIA — best GIGANT media">
+      <a class="logo" href="#home" aria-label="GIGANT MEDIA">
         <img class="logo__img" src="assets/brand/logo-dark.svg?v=2" alt="best GIGANT media" width="220" height="56" />
       </a>
-      <nav class="nav" aria-label="Основное меню">
-        <a href="#about">О компании</a>
-        <a href="#services">Услуги</a>
-        <a href="#campaigns">Клиенты</a>
-        <a href="#cases">Кейсы</a>
-        <a href="#process">Процесс</a>
-        <a href="#team">Команда</a>
-        <a href="#contacts">Контакты</a>
+      <nav class="nav" data-i18n-aria="nav.menu">
+        <a href="#home" data-i18n="nav.home">Главная</a>
+        <a href="#about" data-i18n="nav.about">О компании</a>
+        <a href="#services" data-i18n="nav.services">Услуги</a>
+        <a href="#cases" data-i18n="nav.cases">Кейсы</a>
+        <a href="#advantages" data-i18n="nav.advantages">Преимущества</a>
+        <a href="#reviews" data-i18n="nav.reviews">Отзывы</a>
+        <a href="#faq" data-i18n="nav.faq">FAQ</a>
+        <a href="#contacts" data-i18n="nav.contacts">Контакты</a>
       </nav>
-      <div class="header-cta">
-        <a class="btn btn--primary" href="#contacts">Оставить заявку</a>
+      <div class="header-actions">
+        <div class="lang-switch" role="group" data-i18n-aria="lang.label">
+          <button type="button" class="lang-switch__btn" data-lang-option="ru" aria-pressed="true">RU</button>
+          <button type="button" class="lang-switch__btn" data-lang-option="en" aria-pressed="false">EN</button>
+          <button type="button" class="lang-switch__btn" data-lang-option="uz" aria-pressed="false">UZ</button>
+        </div>
+        <div class="header-cta">
+          <a class="btn btn--primary" href="#contacts" data-i18n="nav.cta">Оставить заявку</a>
+        </div>
+        <button class="menu-toggle" type="button" data-i18n-aria="nav.open" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
       </div>
-      <button class="menu-toggle" type="button" aria-label="Открыть меню" aria-expanded="false">
-        <span></span><span></span><span></span>
-      </button>
     </div>
   </header>
 
   <main>
-    <!-- HERO -->
-    <section class="hero">
+    <section class="hero" id="home">
       <div class="pattern-grid" aria-hidden="true"></div>
       <div class="container container--wide hero__grid">
         <div class="hero__copy reveal">
-          <p class="eyebrow">Рекламное производство · Узбекистан</p>
-          <h1 class="h1">Производим рекламу, которая работает</h1>
-          <p class="lead">
-            GIGANT MEDIA — полный цикл: дизайн, производство и монтаж.
-            Вывески, ПОСМ, печать, мебель и оформление объектов по всему Узбекистану.
-          </p>
+          <p class="eyebrow" data-i18n="hero.eyebrow">Рекламное производство · Узбекистан</p>
+          <h1 class="h1" data-i18n="hero.title">Производим рекламу, которая работает</h1>
+          <p class="lead" data-i18n="hero.lead">GIGANT MEDIA — полный цикл: дизайн, производство и монтаж. Вывески, ПОСМ, печать, мебель и оформление объектов по всему Узбекистану.</p>
           <div class="btn-row">
-            <a class="btn btn--primary" href="#contacts">Рассчитать проект</a>
-            <a class="btn btn--secondary" href="#cases">Смотреть кейсы</a>
+            <a class="btn btn--primary" href="#contacts" data-i18n="hero.cta1">Рассчитать проект</a>
+            <a class="btn btn--secondary" href="#cases" data-i18n="hero.cta2">Смотреть кейсы</a>
           </div>
           <div class="hero__meta">
-            <span class="chip">15+ лет на рынке</span>
-            <span class="chip">1500 проектов / год</span>
-            <span class="chip">Собственное производство</span>
+            <span class="chip" data-i18n="hero.chip1">15+ лет на рынке</span>
+            <span class="chip" data-i18n="hero.chip2">1500 проектов / год</span>
+            <span class="chip" data-i18n="hero.chip3">Собственное производство</span>
           </div>
         </div>
         <div class="hero__visual reveal">
           <div class="hero__frame">
-            <img src="assets/images/hero.webp" alt="Производство рекламной продукции GIGANT MEDIA" data-parallax />
+            <img src="assets/images/hero.webp" data-i18n-alt="hero.imgAlt" alt="Производство рекламной продукции GIGANT MEDIA" data-parallax width="800" height="1000" />
           </div>
-          <span class="chip hero__float hero__float--a">85 специалистов</span>
-          <span class="chip hero__float hero__float--b">1500 м² площадей</span>
+          <span class="chip hero__float hero__float--a" data-i18n="hero.float1">85 специалистов</span>
+          <span class="chip hero__float hero__float--b" data-i18n="hero.float2">1500 м² площадей</span>
         </div>
       </div>
     </section>
 
-    <!-- ABOUT -->
     <section class="section about-section" id="about">
       <div class="container">
         <div class="about-grid">
           <div class="about-copy reveal">
             <div class="section-head" style="margin-bottom:0;">
-              <p class="eyebrow">Компания</p>
-              <h2 class="h2">О компании</h2>
+              <p class="eyebrow" data-i18n="about.eyebrow">Компания</p>
+              <h2 class="h2" data-i18n="about.title">О компании</h2>
             </div>
-            <p class="about-copy__text">
-              Рекламно-производственная компания полного цикла «GIGANT MEDIA» успешно работает на рекламном рынке более 15 лет и имеем честь предложить Вам весь комплекс рекламных, полиграфических и дизайнерских услуг на высоком профессиональном и качественном уровне. За «плечами» богатый опыт производства наружной рекламы. Многие фасады зданий, офисов, магазинов города выглядят по-новому, благодаря специалистам нашего агентства. Теперь наши филиалы открыты по всему Узбекистану
-            </p>
-            <div class="about-regions" aria-label="Филиалы и города">
-              <p class="about-regions__label">Филиалы по Узбекистану</p>
+            <p class="about-copy__text" data-i18n="about.p1"></p>
+            <p class="about-copy__text" data-i18n="about.p2"></p>
+            <div class="about-regions">
+              <h3 class="about-regions__label" data-i18n="about.geo">География присутствия</h3>
               <ul class="about-regions__list">
-                <li>Ташкент — Ташкентская область</li>
-                <li>Город Чирчик</li>
-                <li>Город Ангрен</li>
-                <li>Город Нурафшон</li>
-                <li>Город Бука</li>
-                <li>Город Бекабад</li>
-                <li>Ургенч — Нукус</li>
-                <li>Навои — Бухара</li>
-                <li>Гулистан — Джиззак — Самарканд</li>
-                <li>Фергана — Каканд — Андижан — Наманган</li>
+              <li>Ташкент — Ташкентская область</li>
+              <li>Город Чирчик</li>
+              <li>Город Ангрен</li>
+              <li>Город Нурафшон</li>
+              <li>Город Бука</li>
+              <li>Город Бекабад</li>
+              <li>Ургенч — Нукус</li>
+              <li>Навои — Бухара</li>
+              <li>Гулистан — Джиззак — Самарканд</li>
+              <li>Фергана — Каканд — Андижан — Наманган</li>
               </ul>
             </div>
           </div>
           <div class="about-visual reveal">
-            <div class="about-visual__main">
-              <img src="assets/images/about-1.webp" alt="Производство и объекты GIGANT MEDIA" loading="lazy" />
-            </div>
-            <div class="about-visual__side">
-              <img src="assets/images/about-2.webp" alt="Рекламные конструкции GIGANT MEDIA" loading="lazy" />
-            </div>
+            <img src="assets/images/about-1.webp" alt="" loading="lazy" width="640" height="800" />
+            <img src="assets/images/about-2.webp" alt="" loading="lazy" width="640" height="800" />
           </div>
         </div>
       </div>
     </section>
 
-    <!-- SERVICES CAROUSEL -->
     <section class="section services-section" id="services">
       <div class="container">
         <div class="services-head reveal">
           <div class="section-head" style="margin-bottom:0;">
-            <p class="eyebrow">Услуги</p>
-            <h2 class="h2">13 направлений полного цикла</h2>
-            <p>Каждая услуга — продающее решение с фото реального производства. Листайте или тяните карточки.</p>
+            <p class="eyebrow" data-i18n="services.eyebrow">Услуги</p>
+            <h2 class="h2" data-i18n="services.title">13 направлений полного цикла</h2>
+            <p data-i18n="services.lead"></p>
           </div>
           <div class="carousel-nav" data-services-nav>
-            <button type="button" class="carousel-btn" data-dir="-1" aria-label="Назад">‹</button>
-            <button type="button" class="carousel-btn carousel-btn--accent" data-dir="1" aria-label="Вперёд">›</button>
+            <button type="button" class="carousel-btn" data-dir="-1" data-i18n-aria="services.prev">‹</button>
+            <button type="button" class="carousel-btn carousel-btn--accent" data-dir="1" data-i18n-aria="services.next">›</button>
           </div>
         </div>
       </div>
       <div class="services-carousel reveal" data-services-carousel>
         <div class="services-track" data-services-track>
           <a class="card service-slide" href="services/signs.html">
-            <div class="service-slide__name"><span>1</span><h3>Вывески</h3></div>
-            <p>Объёмные буквы, световые короба и фасадные конструкции с монтажом.</p>
-            <div class="service-slide__media"><img src="assets/services/01-signs.webp" alt="Вывески" loading="lazy" /></div>
-            <span class="service-card__link">Подробнее →</span>
+            <div class="service-slide__name"><span>1</span><h3 data-i18n="services.s1.t"></h3></div>
+            <p data-i18n="services.s1.d"></p>
+            <span class="service-slide__benefit" data-i18n="services.s1.b"></span>
+            <div class="service-slide__media"><img src="assets/services/01-signs.webp" alt="" data-i18n-alt="services.s1.t" loading="lazy" /></div>
+            <span class="service-card__link" data-i18n="services.more"></span>
           </a>
           <a class="card service-slide" href="services/wide-format.html">
-            <div class="service-slide__name"><span>2</span><h3>ПОСМ</h3></div>
-            <p>Шелфтокеры, стопперы, диспенсеры и материалы для точки продаж.</p>
-            <div class="service-slide__media"><img src="assets/services/02-posm.webp" alt="ПОСМ" loading="lazy" /></div>
-            <span class="service-card__link">Подробнее →</span>
+            <div class="service-slide__name"><span>2</span><h3 data-i18n="services.s2.t"></h3></div>
+            <p data-i18n="services.s2.d"></p>
+            <span class="service-slide__benefit" data-i18n="services.s2.b"></span>
+            <div class="service-slide__media"><img src="assets/services/02-posm.webp" alt="" data-i18n-alt="services.s2.t" loading="lazy" /></div>
+            <span class="service-card__link" data-i18n="services.more"></span>
           </a>
           <a class="card service-slide" href="services/wide-format.html">
-            <div class="service-slide__name"><span>3</span><h3>Придорожная реклама</h3></div>
-            <p>Щиты, конструкции и носители вдоль транспортных артерий.</p>
-            <div class="service-slide__media"><img src="assets/services/03-roadside.webp" alt="Придорожная реклама" loading="lazy" /></div>
-            <span class="service-card__link">Подробнее →</span>
+            <div class="service-slide__name"><span>3</span><h3 data-i18n="services.s3.t"></h3></div>
+            <p data-i18n="services.s3.d"></p>
+            <span class="service-slide__benefit" data-i18n="services.s3.b"></span>
+            <div class="service-slide__media"><img src="assets/services/03-roadside.webp" alt="" data-i18n-alt="services.s3.t" loading="lazy" /></div>
+            <span class="service-card__link" data-i18n="services.more"></span>
           </a>
           <a class="card service-slide" href="services/wide-format.html">
-            <div class="service-slide__name"><span>4</span><h3>Мебель</h3></div>
-            <p>Торговая и выставочная мебель под бренд и задачу объекта.</p>
-            <div class="service-slide__media"><img src="assets/services/04-furniture.webp" alt="Мебель" loading="lazy" /></div>
-            <span class="service-card__link">Подробнее →</span>
+            <div class="service-slide__name"><span>4</span><h3 data-i18n="services.s4.t"></h3></div>
+            <p data-i18n="services.s4.d"></p>
+            <span class="service-slide__benefit" data-i18n="services.s4.b"></span>
+            <div class="service-slide__media"><img src="assets/services/04-furniture.webp" alt="" data-i18n-alt="services.s4.t" loading="lazy" /></div>
+            <span class="service-card__link" data-i18n="services.more"></span>
           </a>
           <a class="card service-slide" href="services/wide-format.html">
-            <div class="service-slide__name"><span>5</span><h3>Воблеры</h3></div>
-            <p>POS-элементы, которые привлекают внимание к товару на полке.</p>
-            <div class="service-slide__media"><img src="assets/services/05-wobblers.webp" alt="Воблеры" loading="lazy" /></div>
-            <span class="service-card__link">Подробнее →</span>
+            <div class="service-slide__name"><span>5</span><h3 data-i18n="services.s5.t"></h3></div>
+            <p data-i18n="services.s5.d"></p>
+            <span class="service-slide__benefit" data-i18n="services.s5.b"></span>
+            <div class="service-slide__media"><img src="assets/services/05-wobblers.webp" alt="" data-i18n-alt="services.s5.t" loading="lazy" /></div>
+            <span class="service-card__link" data-i18n="services.more"></span>
           </a>
           <a class="card service-slide" href="services/wide-format.html">
-            <div class="service-slide__name"><span>6</span><h3>Мобильные стенды</h3></div>
-            <p>Мобильные конструкции для акций, форумов и выездных мероприятий.</p>
-            <div class="service-slide__media"><img src="assets/services/06-mobile-stands.webp" alt="Мобильные стенды" loading="lazy" /></div>
-            <span class="service-card__link">Подробнее →</span>
+            <div class="service-slide__name"><span>6</span><h3 data-i18n="services.s6.t"></h3></div>
+            <p data-i18n="services.s6.d"></p>
+            <span class="service-slide__benefit" data-i18n="services.s6.b"></span>
+            <div class="service-slide__media"><img src="assets/services/06-mobile-stands.webp" alt="" data-i18n-alt="services.s6.t" loading="lazy" /></div>
+            <span class="service-card__link" data-i18n="services.more"></span>
           </a>
           <a class="card service-slide" href="services/wide-format.html">
-            <div class="service-slide__name"><span>7</span><h3>Декор</h3></div>
-            <p>Декоративные решения для интерьеров, витрин и бренд-зон.</p>
-            <div class="service-slide__media"><img src="assets/services/07-decor.webp" alt="Декор" loading="lazy" /></div>
-            <span class="service-card__link">Подробнее →</span>
+            <div class="service-slide__name"><span>7</span><h3 data-i18n="services.s7.t"></h3></div>
+            <p data-i18n="services.s7.d"></p>
+            <span class="service-slide__benefit" data-i18n="services.s7.b"></span>
+            <div class="service-slide__media"><img src="assets/services/07-decor.webp" alt="" data-i18n-alt="services.s7.t" loading="lazy" /></div>
+            <span class="service-card__link" data-i18n="services.more"></span>
           </a>
           <a class="card service-slide" href="services/wide-format.html">
-            <div class="service-slide__name"><span>8</span><h3>Порошковая покраска</h3></div>
-            <p>Стойкое покрытие металлоконструкций и рекламных изделий.</p>
-            <div class="service-slide__media"><img src="assets/services/08-powder-coating.webp" alt="Порошковая покраска" loading="lazy" /></div>
-            <span class="service-card__link">Подробнее →</span>
+            <div class="service-slide__name"><span>8</span><h3 data-i18n="services.s8.t"></h3></div>
+            <p data-i18n="services.s8.d"></p>
+            <span class="service-slide__benefit" data-i18n="services.s8.b"></span>
+            <div class="service-slide__media"><img src="assets/services/08-powder-coating.webp" alt="" data-i18n-alt="services.s8.t" loading="lazy" /></div>
+            <span class="service-card__link" data-i18n="services.more"></span>
           </a>
           <a class="card service-slide" href="services/wide-format.html">
-            <div class="service-slide__name"><span>9</span><h3>Комплексное оформление</h3></div>
-            <p>Полный цикл оформления объекта: от концепции до монтажа.</p>
-            <div class="service-slide__media"><img src="assets/services/09-complex.webp" alt="Комплексное оформление" loading="lazy" /></div>
-            <span class="service-card__link">Подробнее →</span>
+            <div class="service-slide__name"><span>9</span><h3 data-i18n="services.s9.t"></h3></div>
+            <p data-i18n="services.s9.d"></p>
+            <span class="service-slide__benefit" data-i18n="services.s9.b"></span>
+            <div class="service-slide__media"><img src="assets/services/09-complex.webp" alt="" data-i18n-alt="services.s9.t" loading="lazy" /></div>
+            <span class="service-card__link" data-i18n="services.more"></span>
           </a>
           <a class="card service-slide" href="services/wide-format.html">
-            <div class="service-slide__name"><span>10</span><h3>Рекламная оклейка</h3></div>
-            <p>Брендирование транспорта, витрин и поверхностей плёнкой.</p>
-            <div class="service-slide__media"><img src="assets/services/10-wrapping.webp" alt="Рекламная оклейка" loading="lazy" /></div>
-            <span class="service-card__link">Подробнее →</span>
+            <div class="service-slide__name"><span>10</span><h3 data-i18n="services.s10.t"></h3></div>
+            <p data-i18n="services.s10.d"></p>
+            <span class="service-slide__benefit" data-i18n="services.s10.b"></span>
+            <div class="service-slide__media"><img src="assets/services/10-wrapping.webp" alt="" data-i18n-alt="services.s10.t" loading="lazy" /></div>
+            <span class="service-card__link" data-i18n="services.more"></span>
           </a>
           <a class="card service-slide" href="services/wide-format.html">
-            <div class="service-slide__name"><span>11</span><h3>Широкоформатная печать</h3></div>
-            <p>Баннеры, бренд-зоны, интерьерная и наружная графика.</p>
-            <div class="service-slide__media"><img src="assets/services/11-wide-format.webp" alt="Широкоформатная печать" loading="lazy" /></div>
-            <span class="service-card__link">Подробнее →</span>
+            <div class="service-slide__name"><span>11</span><h3 data-i18n="services.s11.t"></h3></div>
+            <p data-i18n="services.s11.d"></p>
+            <span class="service-slide__benefit" data-i18n="services.s11.b"></span>
+            <div class="service-slide__media"><img src="assets/services/11-wide-format.webp" alt="" data-i18n-alt="services.s11.t" loading="lazy" /></div>
+            <span class="service-card__link" data-i18n="services.more"></span>
           </a>
           <a class="card service-slide" href="services/wide-format.html">
-            <div class="service-slide__name"><span>12</span><h3>Сувениры и награды</h3></div>
-            <p>Корпоративные подарки, награды и сувенирная продукция.</p>
-            <div class="service-slide__media"><img src="assets/services/12-souvenirs.webp" alt="Сувениры и награды" loading="lazy" /></div>
-            <span class="service-card__link">Подробнее →</span>
+            <div class="service-slide__name"><span>12</span><h3 data-i18n="services.s12.t"></h3></div>
+            <p data-i18n="services.s12.d"></p>
+            <span class="service-slide__benefit" data-i18n="services.s12.b"></span>
+            <div class="service-slide__media"><img src="assets/services/12-souvenirs.webp" alt="" data-i18n-alt="services.s12.t" loading="lazy" /></div>
+            <span class="service-card__link" data-i18n="services.more"></span>
           </a>
           <a class="card service-slide" href="services/wide-format.html">
-            <div class="service-slide__name"><span>13</span><h3>Выставочные стенды</h3></div>
-            <p>Выставочные стенды и конструкции под ключ.</p>
-            <div class="service-slide__media"><img src="assets/services/13-exhibition.webp" alt="Выставочные стенды" loading="lazy" /></div>
-            <span class="service-card__link">Подробнее →</span>
+            <div class="service-slide__name"><span>13</span><h3 data-i18n="services.s13.t"></h3></div>
+            <p data-i18n="services.s13.d"></p>
+            <span class="service-slide__benefit" data-i18n="services.s13.b"></span>
+            <div class="service-slide__media"><img src="assets/services/13-exhibition.webp" alt="" data-i18n-alt="services.s13.t" loading="lazy" /></div>
+            <span class="service-card__link" data-i18n="services.more"></span>
           </a>
         </div>
       </div>
       <div class="container">
-        <p class="services-note text-muted reveal">Гарантийное обслуживание и консультации — даже после сдачи проекта.</p>
+        <p class="services-note text-muted reveal" data-i18n="services.note"></p>
       </div>
     </section>
 
-    <!-- CAMPAIGNS / TRUST MARQUEE -->
     <section class="section campaigns-section" id="campaigns">
       <div class="container">
         <div class="campaigns-head reveal">
           <div class="section-head" style="margin-bottom:0;">
-            <p class="eyebrow">Кампании</p>
-            <h2 class="h2">Нам доверяют</h2>
-            <p>Бренды и компании, для которых мы производим рекламу по всему Узбекистану.</p>
+            <p class="eyebrow" data-i18n="clients.eyebrow">Клиенты</p>
+            <h2 class="h2" data-i18n="clients.title">Нам доверяют</h2>
+            <p data-i18n="clients.lead"></p>
           </div>
         </div>
       </div>
@@ -283,266 +304,175 @@
       </div>
     </section>
 
-    <!-- CASES -->
     <section class="section" id="cases" style="padding-top:0;">
       <div class="container">
         <div class="section-head reveal">
-          <p class="eyebrow">Кейсы</p>
-          <h2 class="h2">Результаты вместо сухого портфолио</h2>
-          <p>Задача клиента, решение производства и измеримый эффект на объекте.</p>
+          <p class="eyebrow" data-i18n="cases.eyebrow">Кейсы</p>
+          <h2 class="h2" data-i18n="cases.title">Результаты вместо сухого портфолио</h2>
+          <p data-i18n="cases.lead"></p>
         </div>
-        <div class="cases-grid">
+        <div class="cases-grid reveal-stagger">
           <a class="card case-card reveal" href="cases/retail-zone.html">
-            <div class="card__media" style="border-radius:0;aspect-ratio:16/9;">
-              <img src="assets/images/case-1.webp" alt="Кейс: ритейл-зона" />
-            </div>
+            <div class="card__media"><img src="assets/images/case-1.webp" alt="" loading="lazy" width="800" height="500" /></div>
             <div class="case-card__body">
-              <div class="case-card__client">Ритейл</div>
-              <h3 class="h3">Оформление торговой зоны под ключ</h3>
-              <p class="text-muted" style="margin-top:8px;">От брифа до монтажа: вывеска, навигация, ПОСМ и бренд-элементы в едином стиле.</p>
+              <p class="case-card__client" data-i18n="cases.c1.client">Ритейл</p>
+              <h3 class="h4" data-i18n="cases.c1.title"></h3>
+              <p class="text-muted" data-i18n="cases.c1.d"></p>
               <div class="case-card__stats">
-                <div><strong>21</strong><span>день до запуска</span></div>
-                <div><strong>+34%</strong><span>заметность зоны</span></div>
+                <div><strong data-i18n="cases.c1.m1">14 дней</strong><span data-i18n="cases.c1.m1l"></span></div>
+                <div><strong data-i18n="cases.c1.m2">1 подрядчик</strong><span data-i18n="cases.c1.m2l"></span></div>
               </div>
+              <span class="service-card__link" data-i18n="cases.link"></span>
             </div>
           </a>
           <div class="cases-side">
-            <a class="card case-card reveal" href="cases/retail-zone.html">
-              <div class="card__media" style="border-radius:0;aspect-ratio:16/9;">
-                <img src="assets/images/case-2.webp" alt="Кейс: фасад" />
-              </div>
+            <article class="card case-card reveal">
+              <div class="card__media"><img src="assets/images/case-2.webp" alt="" loading="lazy" width="600" height="380" /></div>
               <div class="case-card__body">
-                <div class="case-card__client">Фасад</div>
-                <h3 class="h4">Световая вывеска для офисного центра</h3>
+                <p class="case-card__client" data-i18n="cases.c2.client"></p>
+                <h3 class="h4" data-i18n="cases.c2.title"></h3>
+                <p class="text-muted" data-i18n="cases.c2.d"></p>
               </div>
-            </a>
-            <a class="card case-card reveal" href="cases/retail-zone.html">
-              <div class="card__media" style="border-radius:0;aspect-ratio:16/9;">
-                <img src="assets/images/case-3.webp" alt="Кейс: выставка" />
-              </div>
+            </article>
+            <article class="card case-card reveal">
+              <div class="card__media"><img src="assets/images/case-3.webp" alt="" loading="lazy" width="600" height="380" /></div>
               <div class="case-card__body">
-                <div class="case-card__client">Выставка</div>
-                <h3 class="h4">Стенд и печать для отраслевого форума</h3>
+                <p class="case-card__client" data-i18n="cases.c3.client"></p>
+                <h3 class="h4" data-i18n="cases.c3.title"></h3>
+                <p class="text-muted" data-i18n="cases.c3.d"></p>
               </div>
-            </a>
+            </article>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- PROCESS -->
     <section class="section process" id="process">
       <div class="container">
         <div class="section-head reveal">
-          <p class="eyebrow">Процесс</p>
-          <h2 class="h2">Как мы ведём проект</h2>
-          <p>Прозрачные этапы: от расчёта до гарантийного сопровождения после сдачи.</p>
+          <p class="eyebrow" data-i18n="process.eyebrow">Процесс</p>
+          <h2 class="h2" data-i18n="process.title">Как мы работаем</h2>
+          <p data-i18n="process.lead"></p>
         </div>
         <div class="process-track reveal-stagger">
-          <article class="process-step reveal">
-            <div class="process-step__num">1</div>
-            <h3>Бриф и расчёт</h3>
-            <p>Фиксируем задачу, сроки, бюджет и технические ограничения объекта.</p>
-          </article>
-          <article class="process-step reveal">
-            <div class="process-step__num">2</div>
-            <h3>Дизайн и инженерия</h3>
-            <p>Собственный дизайн-отдел и технолог готовят решение под производство.</p>
-          </article>
-          <article class="process-step reveal">
-            <div class="process-step__num">3</div>
-            <h3>Производство</h3>
-            <p>Печать, металлоконструкции, покраска и сборка на собственных площадях.</p>
-          </article>
-          <article class="process-step reveal">
-            <div class="process-step__num">4</div>
-            <h3>Монтаж и сервис</h3>
-            <p>Установка на объекте и консультации даже после завершения проекта.</p>
-          </article>
+          <article class="process-step reveal"><div class="process-step__num">1</div><h3 data-i18n="process.1.t"></h3><p data-i18n="process.1.d"></p></article>
+          <article class="process-step reveal"><div class="process-step__num">2</div><h3 data-i18n="process.2.t"></h3><p data-i18n="process.2.d"></p></article>
+          <article class="process-step reveal"><div class="process-step__num">3</div><h3 data-i18n="process.3.t"></h3><p data-i18n="process.3.d"></p></article>
+          <article class="process-step reveal"><div class="process-step__num">4</div><h3 data-i18n="process.4.t"></h3><p data-i18n="process.4.d"></p></article>
         </div>
       </div>
     </section>
 
-    <!-- NUMBERS -->
     <section class="section numbers" id="numbers">
       <div class="container">
         <div class="section-head reveal">
-          <p class="eyebrow">Масштаб</p>
-          <h2 class="h2">О нас в цифрах</h2>
-          <p>Производственная компания с сетью присутствия по регионам Узбекистана.</p>
+          <p class="eyebrow" data-i18n="numbers.eyebrow">Масштаб</p>
+          <h2 class="h2" data-i18n="numbers.title">О нас в цифрах</h2>
+          <p data-i18n="numbers.lead"></p>
         </div>
         <div class="numbers-grid reveal-stagger">
-          <article class="number-card reveal">
-            <div class="number-card__value"><span data-count="1500">0</span><em>+</em></div>
-            <p>проектов в год</p>
-          </article>
-          <article class="number-card reveal">
-            <div class="number-card__value"><span data-count="85">0</span></div>
-            <p>сотрудников в команде</p>
-          </article>
-          <article class="number-card reveal">
-            <div class="number-card__value"><span data-count="15">0</span><em>+</em></div>
-            <p>лет на рекламном рынке</p>
-          </article>
-          <article class="number-card reveal">
-            <div class="number-card__value"><span data-count="1500">0</span><em> м²</em></div>
-            <p>производственных площадей</p>
-          </article>
+          <article class="number-card reveal"><div class="number-card__value"><span data-count="1500">0</span><em>+</em></div><p data-i18n="numbers.1"></p></article>
+          <article class="number-card reveal"><div class="number-card__value"><span data-count="85">0</span></div><p data-i18n="numbers.2"></p></article>
+          <article class="number-card reveal"><div class="number-card__value"><span data-count="15">0</span><em>+</em></div><p data-i18n="numbers.3"></p></article>
+          <article class="number-card reveal"><div class="number-card__value"><span data-count="1500">0</span><em> м²</em></div><p data-i18n="numbers.4"></p></article>
         </div>
       </div>
     </section>
 
-    <!-- TEAM -->
-    <section class="section" id="team">
+    <section class="section section--tight" id="advantages">
       <div class="container">
         <div class="section-head reveal">
-          <p class="eyebrow">Команда</p>
-          <h2 class="h2">Люди, которые делают результат</h2>
-          <p>Основатель, дизайнеры и производство — одна команда от идеи до монтажа.</p>
+          <p class="eyebrow" data-i18n="advantages.eyebrow">Преимущества</p>
+          <h2 class="h2" data-i18n="advantages.title">Почему выбирают GIGANT MEDIA</h2>
+          <p data-i18n="advantages.lead"></p>
         </div>
-        <div class="team-grid reveal-stagger">
-          <article class="card team-card reveal">
-            <div class="team-card__photo"><img src="assets/images/team-1.webp" alt="Катков Андрей Генадьевич" /></div>
-            <h3>Катков Андрей Генадьевич</h3>
-            <span class="team-card__role">Основатель</span>
-            <p>«Качество и сроки — часть продукта, а не опция.»</p>
-          </article>
-          <article class="card team-card reveal">
-            <div class="team-card__photo"><img src="assets/images/team-2.webp" alt="Дизайнер" /></div>
-            <h3>Дизайн-отдел</h3>
-            <span class="team-card__role">Арт и макеты</span>
-            <p>«Готовим решения, которые реально производятся.»</p>
-          </article>
-          <article class="card team-card reveal">
-            <div class="team-card__photo"><img src="assets/images/team-3.webp" alt="Производство" /></div>
-            <h3>Производство</h3>
-            <span class="team-card__role">Цех и инженерия</span>
-            <p>«Контролируем процесс на каждом этапе.»</p>
-          </article>
-          <article class="card team-card reveal">
-            <div class="team-card__photo"><img src="assets/images/team-4.webp" alt="Проектный менеджер" /></div>
-            <h3>Проектный офис</h3>
-            <span class="team-card__role">Менеджмент</span>
-            <p>«Ведём клиента от брифа до сдачи объекта.»</p>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <!-- WHY -->
-    <section class="section section--tight" style="padding-top:0;">
-      <div class="container">
         <div class="benefit-grid reveal-stagger">
-          <article class="card benefit-card reveal">
-            <span class="chip chip--soft">Производство</span>
-            <h3>Собственный цех</h3>
-            <p class="text-muted">Оптимальная стоимость и сжатые сроки без лишних подрядных звеньев.</p>
-          </article>
-          <article class="card benefit-card reveal">
-            <span class="chip chip--soft">Экспертиза</span>
-            <h3>Индивидуальный подход</h3>
-            <p class="text-muted">Технолог помогает оптимизировать конструкцию, бюджет и сроки изготовления.</p>
-          </article>
-          <article class="card benefit-card reveal">
-            <span class="chip chip--soft">Дизайн</span>
-            <h3>Свой дизайн-отдел</h3>
-            <p class="text-muted">Профессиональные макеты и визуалы под любую продукцию компании.</p>
-          </article>
+          <article class="card benefit-card reveal"><span class="chip chip--soft" data-i18n="advantages.1.chip"></span><h3 data-i18n="advantages.1.t"></h3><p class="text-muted" data-i18n="advantages.1.d"></p></article>
+          <article class="card benefit-card reveal"><span class="chip chip--soft" data-i18n="advantages.2.chip"></span><h3 data-i18n="advantages.2.t"></h3><p class="text-muted" data-i18n="advantages.2.d"></p></article>
+          <article class="card benefit-card reveal"><span class="chip chip--soft" data-i18n="advantages.3.chip"></span><h3 data-i18n="advantages.3.t"></h3><p class="text-muted" data-i18n="advantages.3.d"></p></article>
         </div>
       </div>
     </section>
 
-    <!-- REVIEWS -->
-    <section class="section" id="reviews" style="padding-top:48px;">
+    <section class="section" id="reviews">
       <div class="container">
         <div class="section-head reveal">
-          <p class="eyebrow">Отзывы</p>
-          <h2 class="h2">Слова клиентов</h2>
-          <p>Фокус на качестве, скорости обработки заказа и предсказуемой цене.</p>
+          <p class="eyebrow" data-i18n="reviews.eyebrow">Отзывы</p>
+          <h2 class="h2" data-i18n="reviews.title">Слова клиентов</h2>
+          <p data-i18n="reviews.lead"></p>
         </div>
         <div class="reviews-grid reveal-stagger">
-          <article class="card review-card reveal">
-            <span class="chip chip--soft">Клиент</span>
-            <p class="review-card__quote">«Отличное качество, скорость обработки заказа на высоте. Приемлемые цены. Обязательно обращусь снова.»</p>
-            <div class="review-card__author">
-              <div class="review-card__avatar" aria-hidden="true"></div>
-              <div>
-                <strong>Рамиль Ринатович</strong>
-                <span>Директор компании</span>
-              </div>
-            </div>
-          </article>
-          <article class="card review-card reveal">
-            <span class="chip chip--soft">Производство</span>
-            <p class="review-card__quote">«Важно, что есть свой цех и дизайн: меньше согласований, быстрее выход на монтаж.»</p>
-            <div class="review-card__author">
-              <div class="review-card__avatar" aria-hidden="true"></div>
-              <div>
-                <strong>B2B-клиент</strong>
-                <span>Ритейл / оформление</span>
-              </div>
-            </div>
-          </article>
-          <article class="card review-card reveal">
-            <span class="chip chip--soft">Сервис</span>
-            <p class="review-card__quote">«После сдачи проекта продолжают консультировать — это редкость и сильный аргумент.»</p>
-            <div class="review-card__author">
-              <div class="review-card__avatar" aria-hidden="true"></div>
-              <div>
-                <strong>Партнёр</strong>
-                <span>Комплексное оформление</span>
-              </div>
-            </div>
-          </article>
+          <article class="card review-card reveal"><span class="chip chip--soft" data-i18n="reviews.1.chip"></span><p class="review-card__quote" data-i18n="reviews.1.q"></p><div class="review-card__author"><div class="review-card__avatar" aria-hidden="true"></div><div><strong data-i18n="reviews.1.n"></strong><span data-i18n="reviews.1.r"></span></div></div></article>
+          <article class="card review-card reveal"><span class="chip chip--soft" data-i18n="reviews.2.chip"></span><p class="review-card__quote" data-i18n="reviews.2.q"></p><div class="review-card__author"><div class="review-card__avatar" aria-hidden="true"></div><div><strong data-i18n="reviews.2.n"></strong><span data-i18n="reviews.2.r"></span></div></div></article>
+          <article class="card review-card reveal"><span class="chip chip--soft" data-i18n="reviews.3.chip"></span><p class="review-card__quote" data-i18n="reviews.3.q"></p><div class="review-card__author"><div class="review-card__avatar" aria-hidden="true"></div><div><strong data-i18n="reviews.3.n"></strong><span data-i18n="reviews.3.r"></span></div></div></article>
         </div>
       </div>
     </section>
 
-    <!-- CONTACTS -->
+    <section class="section" id="faq">
+      <div class="container">
+        <div class="section-head reveal">
+          <p class="eyebrow" data-i18n="faq.eyebrow">FAQ</p>
+          <h2 class="h2" data-i18n="faq.title">Частые вопросы</h2>
+          <p data-i18n="faq.lead"></p>
+        </div>
+        <div class="faq reveal">
+          <details class="faq-item"><summary data-i18n="faq.1.q"></summary><p data-i18n="faq.1.a"></p></details>
+          <details class="faq-item"><summary data-i18n="faq.2.q"></summary><p data-i18n="faq.2.a"></p></details>
+          <details class="faq-item"><summary data-i18n="faq.3.q"></summary><p data-i18n="faq.3.a"></p></details>
+          <details class="faq-item"><summary data-i18n="faq.4.q"></summary><p data-i18n="faq.4.a"></p></details>
+        </div>
+      </div>
+    </section>
+
     <section class="section" id="contacts">
       <div class="container">
         <div class="cta-band reveal">
           <div>
-            <p class="eyebrow" style="color:var(--color-primary);">Контакты</p>
-            <h2 class="h2">Получить консультацию</h2>
-            <p class="lead">Оставьте контакты — менеджер свяжется и уточнит задачу, сроки и бюджет.</p>
+            <p class="eyebrow" style="color:var(--color-primary);" data-i18n="contacts.eyebrow">Контакты</p>
+            <h2 class="h2" data-i18n="contacts.title">Получить консультацию</h2>
+            <p class="lead" data-i18n="contacts.lead"></p>
             <div class="contact-aside">
-              <div class="contact-item">
-                <span>Телефон</span>
-                <a href="tel:+998908056692">+998 90 805 66 92</a>
-              </div>
-              <div class="contact-item">
-                <span>Дополнительно</span>
-                <strong>+998 99 868 86 83 · +998 90 976 74 86</strong>
-              </div>
-              <div class="contact-item">
-                <span>Адрес</span>
-                <strong>г. Ташкент, Юнусабадский район, 9 квартал, ул. Юкори Каракамыш, 5А</strong>
+              <div class="contact-item"><span data-i18n="contacts.phone">Телефон</span><a href="tel:+998908056692">+998 90 805 66 92</a></div>
+              <div class="contact-item"><span data-i18n="contacts.more">Дополнительно</span><strong>+998 99 868 86 83 · +998 90 976 74 86</strong></div>
+              <div class="contact-item"><span data-i18n="contacts.address">Адрес</span><strong data-i18n="contacts.addressValue"></strong></div>
+            </div>
+            <div class="quick-contacts">
+              <p class="quick-contacts__label" data-i18n="contacts.quick">Быстрая связь</p>
+              <div class="quick-contacts__row">
+                <a class="quick-btn" href="tel:+998908056692" data-i18n="contacts.phone">Телефон</a>
+                <a class="quick-btn" href="https://wa.me/998908056692" target="_blank" rel="noopener" data-i18n="contacts.whatsapp">WhatsApp</a>
+                <a class="quick-btn" href="https://t.me/gigantmedia" target="_blank" rel="noopener" data-i18n="contacts.telegram">Telegram</a>
+                <a class="quick-btn" href="mailto:info@bestgigantmedia.uz" data-i18n="contacts.email">Email</a>
               </div>
             </div>
           </div>
-          <form data-lead-form>
+          <form data-lead-form novalidate>
             <div class="field">
-              <label for="name">Имя</label>
-              <input id="name" name="name" type="text" placeholder="Как к вам обращаться" required />
+              <label for="name" data-i18n="form.name">Имя</label>
+              <input id="name" name="name" type="text" data-i18n-placeholder="form.namePh" placeholder="Как к вам обращаться" required autocomplete="name" />
+              <span class="field__error" data-error-for="name" hidden></span>
             </div>
             <div class="field">
-              <label for="phone">Телефон</label>
-              <input id="phone" name="phone" type="tel" placeholder="+998 __ ___ __ __" required />
+              <label for="phone" data-i18n="form.phone">Телефон</label>
+              <input id="phone" name="phone" type="tel" data-i18n-placeholder="form.phonePh" placeholder="+998 __ ___ __ __" required autocomplete="tel" inputmode="tel" />
+              <span class="field__error" data-error-for="phone" hidden></span>
             </div>
             <div class="field">
-              <label for="lang">Язык общения</label>
+              <label for="lang" data-i18n="form.lang">Язык общения</label>
               <select id="lang" name="lang">
-                <option value="ru">Русский</option>
-                <option value="uz">Узбекский</option>
+                <option value="ru" data-i18n="form.langRu">Русский</option>
+                <option value="uz" data-i18n="form.langUz">Узбекский</option>
+                <option value="en" data-i18n="form.langEn">English</option>
               </select>
             </div>
             <div class="field">
-              <label for="msg">Задача</label>
-              <textarea id="msg" name="message" placeholder="Коротко: что нужно сделать и к какому сроку"></textarea>
+              <label for="msg" data-i18n="form.msg">Задача</label>
+              <textarea id="msg" name="message" data-i18n-placeholder="form.msgPh" placeholder="Коротко: что нужно сделать и к какому сроку"></textarea>
             </div>
-            <button class="btn btn--primary" type="submit">Оставить заявку</button>
-            <p class="form-note">Нажимая кнопку, вы соглашаетесь на обработку персональных данных.</p>
+            <button class="btn btn--primary" type="submit" data-i18n="form.submit">Оставить заявку</button>
+            <p class="form-note" data-i18n="form.note"></p>
+            <p class="form-success" data-form-success hidden data-i18n="form.success"></p>
           </form>
         </div>
       </div>
@@ -552,34 +482,48 @@
   <footer class="site-footer">
     <div class="container footer-grid">
       <div>
-        <a class="logo logo--footer" href="index.html" aria-label="GIGANT MEDIA">
+        <a class="logo logo--footer" href="#home" aria-label="GIGANT MEDIA">
           <img class="logo__img" src="assets/brand/logo-full.svg?v=2" alt="best GIGANT media" width="280" height="84" />
         </a>
-        <p style="margin-top:16px;">Рекламно-производственная компания полного цикла. Филиалы по всему Узбекистану.</p>
+        <p style="margin-top:16px;" data-i18n="footer.tagline"></p>
       </div>
       <div>
-        <h4>Меню</h4>
-        <p><a href="#about">О компании</a><br /><a href="#services">Услуги</a><br /><a href="#cases">Кейсы</a><br /><a href="#process">Процесс</a><br /><a href="#team">Команда</a></p>
+        <h4 data-i18n="footer.menu">Меню</h4>
+        <p>
+          <a href="#about" data-i18n="nav.about"></a><br />
+          <a href="#services" data-i18n="nav.services"></a><br />
+          <a href="#cases" data-i18n="nav.cases"></a><br />
+          <a href="#advantages" data-i18n="nav.advantages"></a><br />
+          <a href="#faq" data-i18n="nav.faq"></a><br />
+          <a href="#contacts" data-i18n="nav.contacts"></a>
+        </p>
       </div>
       <div>
-        <h4>Услуги</h4>
-        <p><a href="services/signs.html">Вывески</a><br /><a href="services/wide-format.html">Печать</a><br /><a href="services/wide-format.html">ПОСМ</a><br /><a href="cases/retail-zone.html">Кейсы</a></p>
+        <h4 data-i18n="footer.services">Услуги</h4>
+        <p>
+          <a href="services/signs.html" data-i18n="services.s1.t"></a><br />
+          <a href="services/wide-format.html" data-i18n="services.s11.t"></a><br />
+          <a href="services/wide-format.html" data-i18n="services.s2.t"></a><br />
+          <a href="cases/retail-zone.html" data-i18n="nav.cases"></a>
+        </p>
       </div>
       <div>
-        <h4>Контакты</h4>
+        <h4 data-i18n="footer.contacts">Контакты</h4>
         <p>
           <a href="tel:+998908056692">+998 90 805 66 92</a><br />
-          Юнусабадский р-н, ул. Юкори Каракамыш, 5А<br />
-          Ташкент · регионы Узбекистана
+          <a href="mailto:info@bestgigantmedia.uz">info@bestgigantmedia.uz</a><br />
+          <span data-i18n="contacts.addressValue"></span>
         </p>
       </div>
     </div>
     <div class="container footer-bottom">
-      <span>© GIGANT MEDIA</span>
-      <span>Premium B2B redesign concept</span>
+      <span data-i18n="footer.copy">© GIGANT MEDIA</span>
+      <span data-i18n="footer.note"></span>
     </div>
   </footer>
 
+  <script src="js/content.js"></script>
+  <script src="js/i18n.js"></script>
   <script src="js/main.js"></script>
 </body>
 </html>
