@@ -23,9 +23,28 @@
   <link rel="stylesheet" href="css/base.css" />
   <link rel="stylesheet" href="css/components.css" />
   <link rel="stylesheet" href="css/pages.css" />
+  <link rel="stylesheet" href="css/strict.css" />
 </head>
 <body>
   <a class="skip-link" href="#home">Skip to content</a>
+  <div class="topbar">
+    <div class="container container--wide topbar__inner">
+      <div class="topbar__links">
+        <a href="#about" data-i18n="nav.about">О компании</a>
+        <a href="#reviews" data-i18n="nav.reviews">Отзывы</a>
+        <a href="#contacts" data-i18n="nav.contacts">Контакты</a>
+      </div>
+      <div class="topbar__contacts">
+        <a class="topbar__phone" href="tel:+998908056692">+998 90 805 66 92</a>
+        <a class="topbar__phone topbar__phone--secondary" href="tel:+998998688683">+998 99 868 86 83</a>
+        <div class="topbar__social">
+          <a href="https://wa.me/998908056692" target="_blank" rel="noopener" aria-label="WhatsApp">WA</a>
+          <a href="https://t.me/gigantmedia" target="_blank" rel="noopener" aria-label="Telegram">TG</a>
+          <a href="mailto:info@bestgigantmedia.uz" aria-label="Email">@</a>
+        </div>
+      </div>
+    </div>
+  </div>
   <header class="site-header">
     <div class="container container--wide site-header__inner">
       <a class="logo" href="#home" aria-label="GIGANT MEDIA">
@@ -33,11 +52,10 @@
       </a>
       <nav class="nav" data-i18n-aria="nav.menu">
         <a href="#home" data-i18n="nav.home">Главная</a>
-        <a href="#about" data-i18n="nav.about">О компании</a>
         <a href="#services" data-i18n="nav.services">Услуги</a>
         <a href="#cases" data-i18n="nav.cases">Кейсы</a>
         <a href="#advantages" data-i18n="nav.advantages">Преимущества</a>
-        <a href="#reviews" data-i18n="nav.reviews">Отзывы</a>
+        <a href="#about" data-i18n="nav.about">О компании</a>
         <a href="#faq" data-i18n="nav.faq">FAQ</a>
         <a href="#contacts" data-i18n="nav.contacts">Контакты</a>
       </nav>
@@ -58,16 +76,24 @@
   </header>
 
   <main>
-    <section class="hero" id="home">
+
+<section class="hero" id="home">
       <div class="pattern-grid" aria-hidden="true"></div>
+      <div class="hero__splash hero__splash--a" aria-hidden="true"></div>
+      <div class="hero__splash hero__splash--b" aria-hidden="true"></div>
       <div class="container container--wide hero__grid">
         <div class="hero__copy reveal">
           <p class="eyebrow" data-i18n="hero.eyebrow">Рекламное производство · Узбекистан</p>
-          <h1 class="h1" data-i18n="hero.title">Производим рекламу, которая работает</h1>
-          <p class="lead" data-i18n="hero.lead">GIGANT MEDIA — полный цикл: дизайн, производство и монтаж. Вывески, ПОСМ, печать, мебель и оформление объектов по всему Узбекистану.</p>
+          <h1 class="h1" data-i18n="hero.title">Один подрядчик: дизайн, производство и монтаж</h1>
+          <p class="lead" data-i18n="hero.lead">Без срыва сроков и цепочки субподрядчиков. Вывески, POSM, печать и оформление объектов по всему Узбекистану — расчёт в течение рабочего дня.</p>
           <div class="btn-row">
-            <a class="btn btn--primary" href="#contacts" data-i18n="hero.cta1">Рассчитать проект</a>
+            <a class="btn btn--primary" href="#contacts" data-i18n="hero.cta1">Рассчитать за 24 часа</a>
             <a class="btn btn--secondary" href="#cases" data-i18n="hero.cta2">Смотреть кейсы</a>
+          </div>
+          <div class="hero__segments" data-hero-segments>
+            <a href="#services" data-i18n="hero.seg1">Для ритейла</a>
+            <a href="#cases" data-i18n="hero.seg2">Для банков</a>
+            <a href="#cases" data-i18n="hero.seg3">Для HoReCa</a>
           </div>
           <div class="hero__meta">
             <span class="chip" data-i18n="hero.chip1">15+ лет на рынке</span>
@@ -85,137 +111,83 @@
       </div>
     </section>
 
-    <section class="section about-section" id="about">
+<section class="section campaigns-section" id="campaigns">
       <div class="container">
-        <div class="about-grid">
-          <div class="about-copy reveal">
-            <div class="section-head" style="margin-bottom:0;">
-              <p class="eyebrow" data-i18n="about.eyebrow">Компания</p>
-              <h2 class="h2" data-i18n="about.title">О компании</h2>
-            </div>
-            <p class="about-copy__text" data-i18n="about.p1"></p>
-            <p class="about-copy__text" data-i18n="about.p2"></p>
-            <div class="about-regions">
-              <h3 class="about-regions__label" data-i18n="about.geo">География присутствия</h3>
-              <ul class="about-regions__list">
-              <li>Ташкент — Ташкентская область</li>
-              <li>Город Чирчик</li>
-              <li>Город Ангрен</li>
-              <li>Город Нурафшон</li>
-              <li>Город Бука</li>
-              <li>Город Бекабад</li>
-              <li>Ургенч — Нукус</li>
-              <li>Навои — Бухара</li>
-              <li>Гулистан — Джиззак — Самарканд</li>
-              <li>Фергана — Каканд — Андижан — Наманган</li>
-              </ul>
+        <div class="campaigns-head reveal">
+          <div class="section-head" style="margin-bottom:0;">
+            <p class="eyebrow" data-i18n="clients.eyebrow">Клиенты</p>
+            <h2 class="h2" data-i18n="clients.title">Нам доверяют</h2>
+            <p data-i18n="clients.lead"></p>
+          </div>
+        </div>
+      </div>
+      <div class="marquee reveal" data-marquee aria-label="Логотипы клиентов">
+        <div class="marquee__row marquee__row--left">
+          <div class="marquee__track">
+            <div class="marquee__group">
+              <div class="partner-card"><img src="assets/partners/partner-00.png?v=good1" alt="" loading="lazy" /></div>
+              <div class="partner-card"><img src="assets/partners/partner-01.png?v=good1" alt="" loading="lazy" /></div>
+              <div class="partner-card"><img src="assets/partners/partner-02.png?v=good1" alt="" loading="lazy" /></div>
+              <div class="partner-card"><img src="assets/partners/partner-03.png?v=good1" alt="" loading="lazy" /></div>
+              <div class="partner-card"><img src="assets/partners/partner-05.png?v=good1" alt="" loading="lazy" /></div>
+              <div class="partner-card"><img src="assets/partners/partner-06.png?v=good1" alt="" loading="lazy" /></div>
+              <div class="partner-card"><img src="assets/partners/partner-07.png?v=good1" alt="" loading="lazy" /></div>
+              <div class="partner-card"><img src="assets/partners/partner-08.png?v=good1" alt="" loading="lazy" /></div>
+              <div class="partner-card"><img src="assets/partners/partner-09.png?v=good1" alt="" loading="lazy" /></div>
+              <div class="partner-card"><img src="assets/partners/partner-10.png?v=good1" alt="" loading="lazy" /></div>
+              <div class="partner-card"><img src="assets/partners/partner-11.png?v=good1" alt="" loading="lazy" /></div>
+              <div class="partner-card"><img src="assets/partners/partner-12.png?v=good1" alt="" loading="lazy" /></div>
+              <div class="partner-card"><img src="assets/partners/partner-13.png?v=good1" alt="" loading="lazy" /></div>
+              <div class="partner-card"><img src="assets/partners/partner-14.png?v=good1" alt="" loading="lazy" /></div>
+              <div class="partner-card"><img src="assets/partners/partner-15.png?v=good1" alt="" loading="lazy" /></div>
+              <div class="partner-card"><img src="assets/partners/partner-16.png?v=good1" alt="" loading="lazy" /></div>
+              <div class="partner-card"><img src="assets/partners/partner-17.png?v=good1" alt="" loading="lazy" /></div>
+              <div class="partner-card"><img src="assets/partners/partner-18.png?v=good1" alt="" loading="lazy" /></div>
+              <div class="partner-card"><img src="assets/partners/partner-19.png?v=good1" alt="" loading="lazy" /></div>
+              <div class="partner-card"><img src="assets/partners/partner-20.png?v=good1" alt="" loading="lazy" /></div>
+              <div class="partner-card"><img src="assets/partners/partner-21.png?v=good1" alt="" loading="lazy" /></div>
+              <div class="partner-card"><img src="assets/partners/partner-22.png?v=good1" alt="" loading="lazy" /></div>
+              <div class="partner-card"><img src="assets/partners/partner-23.png?v=good1" alt="" loading="lazy" /></div>
             </div>
           </div>
-          <div class="about-visual reveal">
-            <div class="about-visual__main">
-              <img src="assets/images/case-2.webp" alt="" loading="lazy" width="1200" height="900" />
-            </div>
-            <div class="about-visual__stack">
-              <div class="about-visual__side">
-                <img src="assets/images/about-1.webp" alt="" loading="lazy" width="960" height="1269" />
-              </div>
-              <div class="about-visual__side about-visual__side--wide">
-                <img src="assets/images/prod-2.webp" alt="" loading="lazy" width="1200" height="900" />
-              </div>
+        </div>
+        <div class="marquee__row marquee__row--right">
+          <div class="marquee__track">
+            <div class="marquee__group">
+              <div class="partner-card"><img src="assets/partners/partner-24.png?v=good1" alt="" loading="lazy" /></div>
+              <div class="partner-card"><img src="assets/partners/partner-25.png?v=good1" alt="" loading="lazy" /></div>
+              <div class="partner-card"><img src="assets/partners/partner-26.png?v=good1" alt="" loading="lazy" /></div>
+              <div class="partner-card"><img src="assets/partners/partner-27.png?v=good1" alt="" loading="lazy" /></div>
+              <div class="partner-card"><img src="assets/partners/partner-28.png?v=good1" alt="" loading="lazy" /></div>
+              <div class="partner-card"><img src="assets/partners/partner-29.png?v=good1" alt="" loading="lazy" /></div>
+              <div class="partner-card"><img src="assets/partners/partner-30.png?v=good1" alt="" loading="lazy" /></div>
+              <div class="partner-card"><img src="assets/partners/partner-31.png?v=good1" alt="" loading="lazy" /></div>
+              <div class="partner-card"><img src="assets/partners/partner-32.png?v=good1" alt="" loading="lazy" /></div>
+              <div class="partner-card"><img src="assets/partners/partner-33.png?v=good1" alt="" loading="lazy" /></div>
+              <div class="partner-card"><img src="assets/partners/partner-34.png?v=good1" alt="" loading="lazy" /></div>
+              <div class="partner-card"><img src="assets/partners/partner-35.png?v=good1" alt="" loading="lazy" /></div>
+              <div class="partner-card"><img src="assets/partners/partner-36.png?v=good1" alt="" loading="lazy" /></div>
+              <div class="partner-card"><img src="assets/partners/partner-37.png?v=good1" alt="" loading="lazy" /></div>
+              <div class="partner-card"><img src="assets/partners/partner-38.png?v=good1" alt="" loading="lazy" /></div>
+              <div class="partner-card"><img src="assets/partners/partner-39.png?v=good1" alt="" loading="lazy" /></div>
+              <div class="partner-card"><img src="assets/partners/partner-40.png?v=good1" alt="" loading="lazy" /></div>
+              <div class="partner-card"><img src="assets/partners/partner-41.png?v=good1" alt="" loading="lazy" /></div>
+              <div class="partner-card"><img src="assets/partners/partner-42.png?v=good1" alt="" loading="lazy" /></div>
+              <div class="partner-card"><img src="assets/partners/partner-43.png?v=good1" alt="" loading="lazy" /></div>
+              <div class="partner-card"><img src="assets/partners/partner-44.png?v=good1" alt="" loading="lazy" /></div>
+              <div class="partner-card"><img src="assets/partners/partner-45.png?v=good1" alt="" loading="lazy" /></div>
             </div>
           </div>
         </div>
       </div>
     </section>
 
-    <section class="section team-section" id="team">
-      <div class="container">
-        <div class="section-head reveal">
-          <p class="eyebrow" data-i18n="team.eyebrow">Команда</p>
-          <h2 class="h2" data-i18n="team.title">Наши специалисты</h2>
-          <p data-i18n="team.lead">Фото и профили сотрудников появятся здесь — блок готов к наполнению.</p>
-        </div>
-        <div class="team-slots reveal-stagger">
-          <article class="team-slot reveal">
-            <div class="team-slot__frame" aria-hidden="true">
-              <svg viewBox="0 0 300 375" fill="none" preserveAspectRatio="xMidYMid slice"><rect width="300" height="375" fill="#1a1c16"/><g opacity="0.14" stroke="#c8cbb8" stroke-width="0.8"><circle cx="150" cy="150" r="72"/><circle cx="150" cy="150" r="48"/><circle cx="150" cy="150" r="24"/><line x1="78" y1="150" x2="222" y2="150"/><line x1="150" y1="78" x2="150" y2="222"/></g><circle cx="150" cy="132" r="36" fill="#c8cbb8" opacity="0.12"/><ellipse cx="150" cy="230" rx="58" ry="40" fill="#c8cbb8" opacity="0.1"/></svg>
-            </div>
-            <h3 data-i18n="team.slotName">Имя Фамилия</h3>
-            <span class="team-slot__role" data-i18n="team.slotRole">Должность</span>
-          </article>
-          <article class="team-slot reveal">
-            <div class="team-slot__frame" aria-hidden="true">
-              <svg viewBox="0 0 300 375" fill="none" preserveAspectRatio="xMidYMid slice"><rect width="300" height="375" fill="#1a1c16"/><g opacity="0.14" stroke="#c8cbb8" stroke-width="0.8"><circle cx="150" cy="150" r="72"/><circle cx="150" cy="150" r="48"/><circle cx="150" cy="150" r="24"/><line x1="78" y1="150" x2="222" y2="150"/><line x1="150" y1="78" x2="150" y2="222"/></g><circle cx="150" cy="132" r="36" fill="#c8cbb8" opacity="0.12"/><ellipse cx="150" cy="230" rx="58" ry="40" fill="#c8cbb8" opacity="0.1"/></svg>
-            </div>
-            <h3 data-i18n="team.slotName">Имя Фамилия</h3>
-            <span class="team-slot__role" data-i18n="team.slotRole">Должность</span>
-          </article>
-          <article class="team-slot reveal">
-            <div class="team-slot__frame" aria-hidden="true">
-              <svg viewBox="0 0 300 375" fill="none" preserveAspectRatio="xMidYMid slice"><rect width="300" height="375" fill="#1a1c16"/><g opacity="0.14" stroke="#c8cbb8" stroke-width="0.8"><circle cx="150" cy="150" r="72"/><circle cx="150" cy="150" r="48"/><circle cx="150" cy="150" r="24"/><line x1="78" y1="150" x2="222" y2="150"/><line x1="150" y1="78" x2="150" y2="222"/></g><circle cx="150" cy="132" r="36" fill="#c8cbb8" opacity="0.12"/><ellipse cx="150" cy="230" rx="58" ry="40" fill="#c8cbb8" opacity="0.1"/></svg>
-            </div>
-            <h3 data-i18n="team.slotName">Имя Фамилия</h3>
-            <span class="team-slot__role" data-i18n="team.slotRole">Должность</span>
-          </article>
-          <article class="team-slot reveal">
-            <div class="team-slot__frame" aria-hidden="true">
-              <svg viewBox="0 0 300 375" fill="none" preserveAspectRatio="xMidYMid slice"><rect width="300" height="375" fill="#1a1c16"/><g opacity="0.14" stroke="#c8cbb8" stroke-width="0.8"><circle cx="150" cy="150" r="72"/><circle cx="150" cy="150" r="48"/><circle cx="150" cy="150" r="24"/><line x1="78" y1="150" x2="222" y2="150"/><line x1="150" y1="78" x2="150" y2="222"/></g><circle cx="150" cy="132" r="36" fill="#c8cbb8" opacity="0.12"/><ellipse cx="150" cy="230" rx="58" ry="40" fill="#c8cbb8" opacity="0.1"/></svg>
-            </div>
-            <h3 data-i18n="team.slotName">Имя Фамилия</h3>
-            <span class="team-slot__role" data-i18n="team.slotRole">Должность</span>
-          </article>
-          <article class="team-slot reveal">
-            <div class="team-slot__frame" aria-hidden="true">
-              <svg viewBox="0 0 300 375" fill="none" preserveAspectRatio="xMidYMid slice"><rect width="300" height="375" fill="#1a1c16"/><g opacity="0.14" stroke="#c8cbb8" stroke-width="0.8"><circle cx="150" cy="150" r="72"/><circle cx="150" cy="150" r="48"/><circle cx="150" cy="150" r="24"/><line x1="78" y1="150" x2="222" y2="150"/><line x1="150" y1="78" x2="150" y2="222"/></g><circle cx="150" cy="132" r="36" fill="#c8cbb8" opacity="0.12"/><ellipse cx="150" cy="230" rx="58" ry="40" fill="#c8cbb8" opacity="0.1"/></svg>
-            </div>
-            <h3 data-i18n="team.slotName">Имя Фамилия</h3>
-            <span class="team-slot__role" data-i18n="team.slotRole">Должность</span>
-          </article>
-          <article class="team-slot reveal">
-            <div class="team-slot__frame" aria-hidden="true">
-              <svg viewBox="0 0 300 375" fill="none" preserveAspectRatio="xMidYMid slice"><rect width="300" height="375" fill="#1a1c16"/><g opacity="0.14" stroke="#c8cbb8" stroke-width="0.8"><circle cx="150" cy="150" r="72"/><circle cx="150" cy="150" r="48"/><circle cx="150" cy="150" r="24"/><line x1="78" y1="150" x2="222" y2="150"/><line x1="150" y1="78" x2="150" y2="222"/></g><circle cx="150" cy="132" r="36" fill="#c8cbb8" opacity="0.12"/><ellipse cx="150" cy="230" rx="58" ry="40" fill="#c8cbb8" opacity="0.1"/></svg>
-            </div>
-            <h3 data-i18n="team.slotName">Имя Фамилия</h3>
-            <span class="team-slot__role" data-i18n="team.slotRole">Должность</span>
-          </article>
-          <article class="team-slot reveal">
-            <div class="team-slot__frame" aria-hidden="true">
-              <svg viewBox="0 0 300 375" fill="none" preserveAspectRatio="xMidYMid slice"><rect width="300" height="375" fill="#1a1c16"/><g opacity="0.14" stroke="#c8cbb8" stroke-width="0.8"><circle cx="150" cy="150" r="72"/><circle cx="150" cy="150" r="48"/><circle cx="150" cy="150" r="24"/><line x1="78" y1="150" x2="222" y2="150"/><line x1="150" y1="78" x2="150" y2="222"/></g><circle cx="150" cy="132" r="36" fill="#c8cbb8" opacity="0.12"/><ellipse cx="150" cy="230" rx="58" ry="40" fill="#c8cbb8" opacity="0.1"/></svg>
-            </div>
-            <h3 data-i18n="team.slotName">Имя Фамилия</h3>
-            <span class="team-slot__role" data-i18n="team.slotRole">Должность</span>
-          </article>
-          <article class="team-slot reveal">
-            <div class="team-slot__frame" aria-hidden="true">
-              <svg viewBox="0 0 300 375" fill="none" preserveAspectRatio="xMidYMid slice"><rect width="300" height="375" fill="#1a1c16"/><g opacity="0.14" stroke="#c8cbb8" stroke-width="0.8"><circle cx="150" cy="150" r="72"/><circle cx="150" cy="150" r="48"/><circle cx="150" cy="150" r="24"/><line x1="78" y1="150" x2="222" y2="150"/><line x1="150" y1="78" x2="150" y2="222"/></g><circle cx="150" cy="132" r="36" fill="#c8cbb8" opacity="0.12"/><ellipse cx="150" cy="230" rx="58" ry="40" fill="#c8cbb8" opacity="0.1"/></svg>
-            </div>
-            <h3 data-i18n="team.slotName">Имя Фамилия</h3>
-            <span class="team-slot__role" data-i18n="team.slotRole">Должность</span>
-          </article>
-          <article class="team-slot reveal">
-            <div class="team-slot__frame" aria-hidden="true">
-              <svg viewBox="0 0 300 375" fill="none" preserveAspectRatio="xMidYMid slice"><rect width="300" height="375" fill="#1a1c16"/><g opacity="0.14" stroke="#c8cbb8" stroke-width="0.8"><circle cx="150" cy="150" r="72"/><circle cx="150" cy="150" r="48"/><circle cx="150" cy="150" r="24"/><line x1="78" y1="150" x2="222" y2="150"/><line x1="150" y1="78" x2="150" y2="222"/></g><circle cx="150" cy="132" r="36" fill="#c8cbb8" opacity="0.12"/><ellipse cx="150" cy="230" rx="58" ry="40" fill="#c8cbb8" opacity="0.1"/></svg>
-            </div>
-            <h3 data-i18n="team.slotName">Имя Фамилия</h3>
-            <span class="team-slot__role" data-i18n="team.slotRole">Должность</span>
-          </article>
-          <article class="team-slot reveal">
-            <div class="team-slot__frame" aria-hidden="true">
-              <svg viewBox="0 0 300 375" fill="none" preserveAspectRatio="xMidYMid slice"><rect width="300" height="375" fill="#1a1c16"/><g opacity="0.14" stroke="#c8cbb8" stroke-width="0.8"><circle cx="150" cy="150" r="72"/><circle cx="150" cy="150" r="48"/><circle cx="150" cy="150" r="24"/><line x1="78" y1="150" x2="222" y2="150"/><line x1="150" y1="78" x2="150" y2="222"/></g><circle cx="150" cy="132" r="36" fill="#c8cbb8" opacity="0.12"/><ellipse cx="150" cy="230" rx="58" ry="40" fill="#c8cbb8" opacity="0.1"/></svg>
-            </div>
-            <h3 data-i18n="team.slotName">Имя Фамилия</h3>
-            <span class="team-slot__role" data-i18n="team.slotRole">Должность</span>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section class="section services-section" id="services">
+<section class="section services-section" id="services">
       <div class="container">
         <div class="services-head reveal">
           <div class="section-head" style="margin-bottom:0;">
             <p class="eyebrow" data-i18n="services.eyebrow">Услуги</p>
-            <h2 class="h2" data-i18n="services.title">13 направлений полного цикла</h2>
+            <h2 class="h2" data-i18n="services.title">Ключевые направления</h2>
             <p data-i18n="services.lead"></p>
           </div>
           <div class="carousel-nav" data-services-nav>
@@ -324,78 +296,7 @@
       </div>
     </section>
 
-    <section class="section campaigns-section" id="campaigns">
-      <div class="container">
-        <div class="campaigns-head reveal">
-          <div class="section-head" style="margin-bottom:0;">
-            <p class="eyebrow" data-i18n="clients.eyebrow">Клиенты</p>
-            <h2 class="h2" data-i18n="clients.title">Нам доверяют</h2>
-            <p data-i18n="clients.lead"></p>
-          </div>
-        </div>
-      </div>
-      <div class="marquee reveal" data-marquee aria-label="Логотипы клиентов">
-        <div class="marquee__row marquee__row--left">
-          <div class="marquee__track">
-            <div class="marquee__group">
-              <div class="partner-card"><img src="assets/partners/partner-00.png?v=good1" alt="" loading="lazy" /></div>
-              <div class="partner-card"><img src="assets/partners/partner-01.png?v=good1" alt="" loading="lazy" /></div>
-              <div class="partner-card"><img src="assets/partners/partner-02.png?v=good1" alt="" loading="lazy" /></div>
-              <div class="partner-card"><img src="assets/partners/partner-03.png?v=good1" alt="" loading="lazy" /></div>
-              <div class="partner-card"><img src="assets/partners/partner-05.png?v=good1" alt="" loading="lazy" /></div>
-              <div class="partner-card"><img src="assets/partners/partner-06.png?v=good1" alt="" loading="lazy" /></div>
-              <div class="partner-card"><img src="assets/partners/partner-07.png?v=good1" alt="" loading="lazy" /></div>
-              <div class="partner-card"><img src="assets/partners/partner-08.png?v=good1" alt="" loading="lazy" /></div>
-              <div class="partner-card"><img src="assets/partners/partner-09.png?v=good1" alt="" loading="lazy" /></div>
-              <div class="partner-card"><img src="assets/partners/partner-10.png?v=good1" alt="" loading="lazy" /></div>
-              <div class="partner-card"><img src="assets/partners/partner-11.png?v=good1" alt="" loading="lazy" /></div>
-              <div class="partner-card"><img src="assets/partners/partner-12.png?v=good1" alt="" loading="lazy" /></div>
-              <div class="partner-card"><img src="assets/partners/partner-13.png?v=good1" alt="" loading="lazy" /></div>
-              <div class="partner-card"><img src="assets/partners/partner-14.png?v=good1" alt="" loading="lazy" /></div>
-              <div class="partner-card"><img src="assets/partners/partner-15.png?v=good1" alt="" loading="lazy" /></div>
-              <div class="partner-card"><img src="assets/partners/partner-16.png?v=good1" alt="" loading="lazy" /></div>
-              <div class="partner-card"><img src="assets/partners/partner-17.png?v=good1" alt="" loading="lazy" /></div>
-              <div class="partner-card"><img src="assets/partners/partner-18.png?v=good1" alt="" loading="lazy" /></div>
-              <div class="partner-card"><img src="assets/partners/partner-19.png?v=good1" alt="" loading="lazy" /></div>
-              <div class="partner-card"><img src="assets/partners/partner-20.png?v=good1" alt="" loading="lazy" /></div>
-              <div class="partner-card"><img src="assets/partners/partner-21.png?v=good1" alt="" loading="lazy" /></div>
-              <div class="partner-card"><img src="assets/partners/partner-22.png?v=good1" alt="" loading="lazy" /></div>
-              <div class="partner-card"><img src="assets/partners/partner-23.png?v=good1" alt="" loading="lazy" /></div>
-            </div>
-          </div>
-        </div>
-        <div class="marquee__row marquee__row--right">
-          <div class="marquee__track">
-            <div class="marquee__group">
-              <div class="partner-card"><img src="assets/partners/partner-24.png?v=good1" alt="" loading="lazy" /></div>
-              <div class="partner-card"><img src="assets/partners/partner-25.png?v=good1" alt="" loading="lazy" /></div>
-              <div class="partner-card"><img src="assets/partners/partner-26.png?v=good1" alt="" loading="lazy" /></div>
-              <div class="partner-card"><img src="assets/partners/partner-27.png?v=good1" alt="" loading="lazy" /></div>
-              <div class="partner-card"><img src="assets/partners/partner-28.png?v=good1" alt="" loading="lazy" /></div>
-              <div class="partner-card"><img src="assets/partners/partner-29.png?v=good1" alt="" loading="lazy" /></div>
-              <div class="partner-card"><img src="assets/partners/partner-30.png?v=good1" alt="" loading="lazy" /></div>
-              <div class="partner-card"><img src="assets/partners/partner-31.png?v=good1" alt="" loading="lazy" /></div>
-              <div class="partner-card"><img src="assets/partners/partner-32.png?v=good1" alt="" loading="lazy" /></div>
-              <div class="partner-card"><img src="assets/partners/partner-33.png?v=good1" alt="" loading="lazy" /></div>
-              <div class="partner-card"><img src="assets/partners/partner-34.png?v=good1" alt="" loading="lazy" /></div>
-              <div class="partner-card"><img src="assets/partners/partner-35.png?v=good1" alt="" loading="lazy" /></div>
-              <div class="partner-card"><img src="assets/partners/partner-36.png?v=good1" alt="" loading="lazy" /></div>
-              <div class="partner-card"><img src="assets/partners/partner-37.png?v=good1" alt="" loading="lazy" /></div>
-              <div class="partner-card"><img src="assets/partners/partner-38.png?v=good1" alt="" loading="lazy" /></div>
-              <div class="partner-card"><img src="assets/partners/partner-39.png?v=good1" alt="" loading="lazy" /></div>
-              <div class="partner-card"><img src="assets/partners/partner-40.png?v=good1" alt="" loading="lazy" /></div>
-              <div class="partner-card"><img src="assets/partners/partner-41.png?v=good1" alt="" loading="lazy" /></div>
-              <div class="partner-card"><img src="assets/partners/partner-42.png?v=good1" alt="" loading="lazy" /></div>
-              <div class="partner-card"><img src="assets/partners/partner-43.png?v=good1" alt="" loading="lazy" /></div>
-              <div class="partner-card"><img src="assets/partners/partner-44.png?v=good1" alt="" loading="lazy" /></div>
-              <div class="partner-card"><img src="assets/partners/partner-45.png?v=good1" alt="" loading="lazy" /></div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="section cases-section" id="cases">
+<section class="section cases-section" id="cases">
       <div class="container">
         <div class="section-head reveal">
           <p class="eyebrow" data-i18n="cases.eyebrow">Кейсы</p>
@@ -419,7 +320,7 @@
               <span class="case-card__link" data-i18n="cases.link"></span>
             </div>
           </a>
-          <article class="case-card reveal">
+          <a class="case-card reveal" href="#contacts">
             <div class="case-card__media">
               <img src="assets/images/case-2.webp" alt="" loading="lazy" width="800" height="560" />
               <span class="case-card__index">02</span>
@@ -432,9 +333,10 @@
                 <div><strong data-i18n="cases.c2.m1"></strong><span data-i18n="cases.c2.m1l"></span></div>
                 <div><strong data-i18n="cases.c2.m2"></strong><span data-i18n="cases.c2.m2l"></span></div>
               </div>
+              <span class="case-card__link" data-i18n="cases.ask"></span>
             </div>
-          </article>
-          <article class="case-card reveal">
+          </a>
+          <a class="case-card reveal" href="#contacts">
             <div class="case-card__media">
               <img src="assets/images/case-3.webp" alt="" loading="lazy" width="800" height="560" />
               <span class="case-card__index">03</span>
@@ -447,45 +349,31 @@
                 <div><strong data-i18n="cases.c3.m1"></strong><span data-i18n="cases.c3.m1l"></span></div>
                 <div><strong data-i18n="cases.c3.m2"></strong><span data-i18n="cases.c3.m2l"></span></div>
               </div>
+              <span class="case-card__link" data-i18n="cases.ask"></span>
             </div>
-          </article>
+          </a>
         </div>
       </div>
     </section>
 
-    <section class="section process" id="process">
+    <section class="section funnel-cta" id="cta-cases">
       <div class="container">
-        <div class="section-head reveal">
-          <p class="eyebrow" data-i18n="process.eyebrow">Процесс</p>
-          <h2 class="h2" data-i18n="process.title">Как мы работаем</h2>
-          <p data-i18n="process.lead"></p>
-        </div>
-        <div class="process-track reveal-stagger">
-          <article class="process-step reveal"><div class="process-step__num">1</div><h3 data-i18n="process.1.t"></h3><p data-i18n="process.1.d"></p></article>
-          <article class="process-step reveal"><div class="process-step__num">2</div><h3 data-i18n="process.2.t"></h3><p data-i18n="process.2.d"></p></article>
-          <article class="process-step reveal"><div class="process-step__num">3</div><h3 data-i18n="process.3.t"></h3><p data-i18n="process.3.d"></p></article>
-          <article class="process-step reveal"><div class="process-step__num">4</div><h3 data-i18n="process.4.t"></h3><p data-i18n="process.4.d"></p></article>
-        </div>
-      </div>
-    </section>
-
-    <section class="section numbers" id="numbers">
-      <div class="container">
-        <div class="section-head reveal">
-          <p class="eyebrow" data-i18n="numbers.eyebrow">Масштаб</p>
-          <h2 class="h2" data-i18n="numbers.title">О нас в цифрах</h2>
-          <p data-i18n="numbers.lead"></p>
-        </div>
-        <div class="numbers-grid reveal-stagger">
-          <article class="number-card reveal"><div class="number-card__value"><span data-count="1500">0</span><em>+</em></div><p data-i18n="numbers.1"></p></article>
-          <article class="number-card reveal"><div class="number-card__value"><span data-count="85">0</span></div><p data-i18n="numbers.2"></p></article>
-          <article class="number-card reveal"><div class="number-card__value"><span data-count="15">0</span><em>+</em></div><p data-i18n="numbers.3"></p></article>
-          <article class="number-card reveal"><div class="number-card__value"><span data-count="1500">0</span><em> м²</em></div><p data-i18n="numbers.4"></p></article>
+        <div class="funnel-cta__band reveal">
+          <div>
+            <p class="eyebrow" data-i18n="midCta.1.eyebrow">Следующий шаг</p>
+            <h2 class="h2" data-i18n="midCta.1.title">Нужен похожий результат?</h2>
+            <p data-i18n="midCta.1.lead">Опишите задачу — пришлём расчёт и сроки в течение рабочего дня.</p>
+          </div>
+          <div class="funnel-cta__actions">
+            <a class="btn btn--primary" href="#contacts" data-i18n="midCta.1.cta">Получить расчёт</a>
+            <a class="btn btn--secondary" href="https://wa.me/998908056692" target="_blank" rel="noopener" data-i18n="contacts.whatsapp">WhatsApp</a>
+          </div>
         </div>
       </div>
     </section>
 
-    <section class="section advantages" id="advantages">
+
+<section class="section advantages" id="advantages">
       <div class="container">
         <div class="section-head reveal">
           <p class="eyebrow" data-i18n="advantages.eyebrow">Преимущества</p>
@@ -493,7 +381,7 @@
           <p data-i18n="advantages.lead"></p>
         </div>
         <div class="advantage-pillars reveal-stagger">
-          <article class="advantage-pillar advantage-pillar--lg reveal">
+          <article class="advantage-pillar reveal">
             <span class="advantage-pillar__num" aria-hidden="true">01</span>
             <div class="advantage-pillar__line" aria-hidden="true"></div>
             <p class="advantage-pillar__chip" data-i18n="advantages.1.chip"></p>
@@ -518,7 +406,152 @@
       </div>
     </section>
 
-    <section class="section reviews-section" id="reviews">
+    <section class="section funnel-cta funnel-cta--soft" id="cta-advantages">
+      <div class="container">
+        <div class="funnel-cta__band reveal">
+          <div>
+            <p class="eyebrow" data-i18n="midCta.2.eyebrow">Без риска</p>
+            <h2 class="h2" data-i18n="midCta.2.title">Один подрядчик — от макета до монтажа</h2>
+            <p data-i18n="midCta.2.lead">Свой цех, свой дизайн и сопровождение после сдачи. Перезвоним в рабочее время.</p>
+          </div>
+          <div class="funnel-cta__actions">
+            <a class="btn btn--primary" href="#contacts" data-i18n="nav.cta">Оставить заявку</a>
+            <a class="btn btn--secondary" href="tel:+998908056692" data-i18n="contacts.phone">Телефон</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+<section class="section process" id="process">
+      <div class="container">
+        <div class="section-head reveal">
+          <p class="eyebrow" data-i18n="process.eyebrow">Процесс</p>
+          <h2 class="h2" data-i18n="process.title">Как мы работаем</h2>
+          <p data-i18n="process.lead"></p>
+        </div>
+        <div class="process-track reveal-stagger">
+          <article class="process-step reveal">
+            <span class="process-step__num" aria-hidden="true">01</span>
+            <div class="process-step__line" aria-hidden="true"></div>
+            <h3 data-i18n="process.1.t"></h3>
+            <p data-i18n="process.1.d"></p>
+          </article>
+          <article class="process-step reveal">
+            <span class="process-step__num" aria-hidden="true">02</span>
+            <div class="process-step__line" aria-hidden="true"></div>
+            <h3 data-i18n="process.2.t"></h3>
+            <p data-i18n="process.2.d"></p>
+          </article>
+          <article class="process-step reveal">
+            <span class="process-step__num" aria-hidden="true">03</span>
+            <div class="process-step__line" aria-hidden="true"></div>
+            <h3 data-i18n="process.3.t"></h3>
+            <p data-i18n="process.3.d"></p>
+          </article>
+          <article class="process-step reveal">
+            <span class="process-step__num" aria-hidden="true">04</span>
+            <div class="process-step__line" aria-hidden="true"></div>
+            <h3 data-i18n="process.4.t"></h3>
+            <p data-i18n="process.4.d"></p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    </section>
+
+    <section class="section mosaic-section" id="mosaic" aria-label="Capabilities">
+      <div class="container">
+        <div class="section-head section-head--light reveal">
+          <p class="eyebrow" data-i18n="mosaic.eyebrow">Производство</p>
+          <h2 class="h2" data-i18n="mosaic.title">Превосходство через контроль качества</h2>
+        </div>
+        <div class="mosaic reveal-stagger">
+          <article class="mosaic__cell mosaic__cell--media reveal">
+            <img src="assets/images/prod-2.webp" alt="" loading="lazy" width="900" height="700" />
+          </article>
+          <article class="mosaic__cell mosaic__cell--copy reveal">
+            <span class="mosaic__icon" aria-hidden="true"></span>
+            <h3 data-i18n="mosaic.1.t">Свой цех и инженерия</h3>
+            <p data-i18n="mosaic.1.d">Печать, металлоконструкции и сборка на своих площадях — без лишней цепочки подрядчиков.</p>
+            <a href="#advantages" data-i18n="mosaic.more">Читать полностью</a>
+          </article>
+          <article class="mosaic__cell mosaic__cell--copy reveal">
+            <span class="mosaic__icon mosaic__icon--shield" aria-hidden="true"></span>
+            <h3 data-i18n="mosaic.2.t">Приёмка на каждом этапе</h3>
+            <p data-i18n="mosaic.2.d">Макет, цветопроба, производство и монтаж — фиксируем качество до сдачи объекта.</p>
+            <a href="#process" data-i18n="mosaic.more">Читать полностью</a>
+          </article>
+          <article class="mosaic__cell mosaic__cell--feature reveal">
+            <img src="assets/images/case-1.webp" alt="" loading="lazy" width="900" height="700" />
+            <div class="mosaic__overlay">
+              <h3 data-i18n="mosaic.3.t">От макета до монтажа</h3>
+              <a class="btn btn--primary" href="#contacts" data-i18n="mosaic.cta">Узнать больше</a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+<section class="section about-section" id="about">
+      <div class="container">
+        <div class="about-grid">
+          <div class="about-copy reveal">
+            <div class="section-head" style="margin-bottom:0;">
+              <p class="eyebrow" data-i18n="about.eyebrow">Компания</p>
+              <h2 class="h2" data-i18n="about.title">О компании</h2>
+            </div>
+            <p class="about-copy__text" data-i18n="about.p1"></p>
+            <p class="about-copy__text" data-i18n="about.p2"></p>
+            <div class="about-regions">
+              <h3 class="about-regions__label" data-i18n="about.geo">География присутствия</h3>
+              <ul class="about-regions__list about-regions__list--tiles">
+              <li>Ташкент — Ташкентская область</li>
+              <li>Город Чирчик</li>
+              <li>Город Ангрен</li>
+              <li>Город Нурафшон</li>
+              <li>Город Бука</li>
+              <li>Город Бекабад</li>
+              <li>Ургенч — Нукус</li>
+              <li>Навои — Бухара</li>
+              <li>Гулистан — Джиззак — Самарканд</li>
+              <li>Фергана — Каканд — Андижан — Наманган</li>
+              </ul>
+            </div>
+          </div>
+          <div class="about-visual reveal">
+            <div class="about-visual__main">
+              <img src="assets/images/case-2.webp" alt="" loading="lazy" width="1200" height="900" />
+            </div>
+            <div class="about-visual__side">
+              <img src="assets/images/about-1.webp" alt="" loading="lazy" width="960" height="1269" />
+            </div>
+            <div class="about-visual__side">
+              <img src="assets/images/prod-2.webp" alt="" loading="lazy" width="1200" height="900" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+<section class="section numbers" id="numbers">
+      <div class="container">
+        <div class="section-head reveal">
+          <p class="eyebrow" data-i18n="numbers.eyebrow">Масштаб</p>
+          <h2 class="h2" data-i18n="numbers.title">О нас в цифрах</h2>
+          <p data-i18n="numbers.lead"></p>
+        </div>
+        <div class="numbers-grid reveal-stagger">
+          <article class="number-card reveal"><div class="number-card__value"><span data-count="1500">0</span><em>+</em></div><p data-i18n="numbers.1"></p></article>
+          <article class="number-card reveal"><div class="number-card__value"><span data-count="85">0</span></div><p data-i18n="numbers.2"></p></article>
+          <article class="number-card reveal"><div class="number-card__value"><span data-count="15">0</span><em>+</em></div><p data-i18n="numbers.3"></p></article>
+          <article class="number-card reveal"><div class="number-card__value"><span data-count="1500">0</span><em> м²</em></div><p data-i18n="numbers.4"></p></article>
+        </div>
+      </div>
+    </section>
+
+<section class="section reviews-section" id="reviews">
       <div class="container">
         <div class="section-head reveal">
           <p class="eyebrow" data-i18n="reviews.eyebrow">Отзывы</p>
@@ -528,9 +561,10 @@
         <div class="reviews-layout reveal-stagger">
           <article class="review-feature reveal">
             <span class="review-feature__mark" aria-hidden="true">“</span>
+            <div class="review-feature__line" aria-hidden="true"></div>
+            <p class="review-feature__chip" data-i18n="reviews.1.chip"></p>
             <p class="review-feature__quote" data-i18n="reviews.1.q"></p>
             <div class="review-feature__author">
-              <div class="review-card__avatar" aria-hidden="true"></div>
               <div>
                 <strong data-i18n="reviews.1.n"></strong>
                 <span data-i18n="reviews.1.r"></span>
@@ -539,6 +573,8 @@
           </article>
           <div class="reviews-side">
             <article class="review-quote reveal">
+              <div class="review-quote__line" aria-hidden="true"></div>
+              <p class="review-quote__chip" data-i18n="reviews.2.chip"></p>
               <p data-i18n="reviews.2.q"></p>
               <div class="review-quote__meta">
                 <strong data-i18n="reviews.2.n"></strong>
@@ -546,6 +582,8 @@
               </div>
             </article>
             <article class="review-quote reveal">
+              <div class="review-quote__line" aria-hidden="true"></div>
+              <p class="review-quote__chip" data-i18n="reviews.3.chip"></p>
               <p data-i18n="reviews.3.q"></p>
               <div class="review-quote__meta">
                 <strong data-i18n="reviews.3.n"></strong>
@@ -557,7 +595,7 @@
       </div>
     </section>
 
-    <section class="section" id="faq">
+<section class="section" id="faq">
       <div class="container">
         <div class="section-head reveal">
           <p class="eyebrow" data-i18n="faq.eyebrow">FAQ</p>
@@ -601,13 +639,36 @@
       </div>
     </section>
 
-    <section class="section" id="contacts">
+    </section>
+
+    <section class="section download-section" id="download">
+      <div class="container">
+        <div class="download-band reveal">
+          <div>
+            <p class="eyebrow" data-i18n="download.eyebrow">Материалы</p>
+            <h2 class="h2" data-i18n="download.title">Получить презентацию и примеры работ</h2>
+            <p data-i18n="download.lead">Оставьте контакты — пришлём подборку кейсов и ориентиры по срокам под вашу задачу.</p>
+          </div>
+          <div class="download-band__actions">
+            <a class="btn btn--primary" href="#contacts" data-i18n="download.cta">Запросить материалы</a>
+            <a class="btn btn--dark" href="https://wa.me/998908056692" target="_blank" rel="noopener" data-i18n="download.wa">Написать в WhatsApp</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+<section class="section" id="contacts">
       <div class="container">
         <div class="cta-band reveal">
           <div>
             <p class="eyebrow" style="color:var(--color-primary);" data-i18n="contacts.eyebrow">Контакты</p>
-            <h2 class="h2" data-i18n="contacts.title">Получить консультацию</h2>
+            <h2 class="h2" data-i18n="contacts.title">Получить расчёт</h2>
             <p class="lead" data-i18n="contacts.lead"></p>
+            <ul class="contact-trust">
+              <li data-i18n="contacts.trust1">Ответ в рабочее время · обычно в течение дня</li>
+              <li data-i18n="contacts.trust2">Гарантия и консультации после сдачи</li>
+              <li data-i18n="contacts.trust3">Один подрядчик: дизайн → производство → монтаж</li>
+            </ul>
             <div class="contact-aside">
               <div class="contact-item"><span data-i18n="contacts.phone">Телефон</span><a href="tel:+998908056692">+998 90 805 66 92</a></div>
               <div class="contact-item"><span data-i18n="contacts.more">Дополнительно</span><strong>+998 99 868 86 83 · +998 90 976 74 86</strong></div>
@@ -635,6 +696,21 @@
               <span class="field__error" data-error-for="phone" hidden></span>
             </div>
             <div class="field">
+              <label for="task" data-i18n="form.task">Тип задачи</label>
+              <select id="task" name="task" required>
+                <option value="" data-i18n="form.taskPh">Выберите направление</option>
+                <option value="signs" data-i18n="form.taskSigns">Вывески</option>
+                <option value="posm" data-i18n="form.taskPosm">POSM / печать</option>
+                <option value="complex" data-i18n="form.taskComplex">Комплексное оформление</option>
+                <option value="other" data-i18n="form.taskOther">Другое</option>
+              </select>
+              <span class="field__error" data-error-for="task" hidden></span>
+            </div>
+            <div class="field">
+              <label for="deadline" data-i18n="form.deadline">Желаемый срок</label>
+              <input id="deadline" name="deadline" type="text" data-i18n-placeholder="form.deadlinePh" placeholder="Например: до 15 августа" autocomplete="off" />
+            </div>
+            <div class="field">
               <label for="lang" data-i18n="form.lang">Язык общения</label>
               <select id="lang" name="lang">
                 <option value="ru" data-i18n="form.langRu">Русский</option>
@@ -644,11 +720,17 @@
             </div>
             <div class="field">
               <label for="msg" data-i18n="form.msg">Задача</label>
-              <textarea id="msg" name="message" data-i18n-placeholder="form.msgPh" placeholder="Коротко: что нужно сделать и к какому сроку"></textarea>
+              <textarea id="msg" name="message" data-i18n-placeholder="form.msgPh" placeholder="Коротко: объект, объём, город"></textarea>
             </div>
-            <button class="btn btn--primary" type="submit" data-i18n="form.submit">Оставить заявку</button>
+            <button class="btn btn--primary" type="submit" data-i18n="form.submit">Получить расчёт</button>
             <p class="form-note" data-i18n="form.note"></p>
-            <p class="form-success" data-form-success hidden data-i18n="form.success"></p>
+            <div class="form-success" data-form-success hidden>
+              <p data-i18n="form.success"></p>
+              <div class="form-success__actions">
+                <a class="btn btn--primary" href="https://wa.me/998908056692" target="_blank" rel="noopener" data-i18n="form.successWa">Написать в WhatsApp</a>
+                <a class="btn btn--secondary" href="tel:+998908056692" data-i18n="form.successCall">Позвонить</a>
+              </div>
+            </div>
           </form>
         </div>
       </div>
@@ -697,6 +779,15 @@
       <span data-i18n="footer.note"></span>
     </div>
   </footer>
+
+  <div class="sticky-cta" data-sticky-cta hidden>
+    <a class="sticky-cta__btn sticky-cta__btn--primary" href="#contacts" data-i18n="sticky.cta">Заявка</a>
+    <a class="sticky-cta__btn sticky-cta__btn--wa" href="https://wa.me/998908056692" target="_blank" rel="noopener" data-i18n="sticky.wa">WhatsApp</a>
+  </div>
+
+  <a class="fab-call is-hidden" href="tel:+998908056692" data-fab-call hidden data-i18n-aria="fab.call" aria-label="Позвонить">
+    <span aria-hidden="true"></span>
+  </a>
 
   <script src="js/content.js"></script>
   <script src="js/i18n.js"></script>

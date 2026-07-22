@@ -107,6 +107,29 @@
     update();
   }
 
+  /* Scroll helpers → contacts */
+  const scrollToContacts = () => {
+    const target = document.querySelector("#contacts");
+    if (!target) return;
+    target.scrollIntoView({ behavior: "smooth", block: "start" });
+    const focusable = target.querySelector("#name, [name='name']");
+    window.setTimeout(() => focusable?.focus?.({ preventScroll: true }), 450);
+  };
+
+  document.querySelectorAll("[data-scroll-contacts]").forEach((el) => {
+    el.addEventListener("click", (e) => {
+      e.preventDefault();
+      const label = (el.textContent || "").trim();
+      const task = document.querySelector('#contacts [name="task"]');
+      const msg = document.querySelector('#contacts [name="message"]');
+      if (task && !task.value) task.value = "other";
+      if (msg && label && !msg.value.trim()) {
+        msg.value = label;
+      }
+      scrollToContacts();
+    });
+  });
+
   /* Form validation + i18n-aware feedback */
   document.querySelectorAll("form[data-lead-form]").forEach((form) => {
     const clearErrors = () => {
@@ -136,6 +159,7 @@
 
       const name = form.querySelector('[name="name"]')?.value.trim() || "";
       const phone = form.querySelector('[name="phone"]')?.value.trim() || "";
+      const task = form.querySelector('[name="task"]')?.value.trim() || "";
       const phoneOk = phone.replace(/\D/g, "").length >= 9;
       let valid = true;
 
@@ -147,10 +171,15 @@
         showError("phone", tt("form.errorPhone"));
         valid = false;
       }
+      if (!task) {
+        showError("task", tt("form.errorTask"));
+        valid = false;
+      }
       if (!valid) return;
 
       const btn = form.querySelector('button[type="submit"]');
       const success = form.querySelector("[data-form-success]");
+      const successMsg = success?.querySelector("p");
       if (btn) {
         btn.disabled = true;
         btn.textContent = tt("form.sending");
@@ -159,60 +188,120 @@
       setTimeout(() => {
         form.reset();
         if (success) {
+          if (successMsg) successMsg.textContent = tt("form.success");
           success.hidden = false;
-          success.textContent = tt("form.success");
         }
         if (btn) {
           btn.disabled = false;
           btn.textContent = tt("form.submit");
         }
-        setTimeout(() => {
-          if (success) success.hidden = true;
-        }, 3200);
       }, 500);
     });
   });
 
-  /* Services carousel: drag + arrows */
+  /* Sticky mobile CTA */
+  const stickyCta = document.querySelector("[data-sticky-cta]");
+  const contactsSection = document.querySelector("#contacts");
+  const fabCall = document.querySelector("[data-fab-call]");
+  if (stickyCta || fabCall) {
+    const updateChromeCtas = () => {
+      const scrolled = window.scrollY > 420;
+      const nearContacts = contactsSection
+        ? contactsSection.getBoundingClientRect().top < window.innerHeight * 0.72
+        : false;
+      const mobile = window.matchMedia("(max-width: 720px)").matches;
+      if (stickyCta) {
+        const showSticky = scrolled && !nearContacts && mobile;
+        stickyCta.hidden = !showSticky;
+        document.body.classList.toggle("has-sticky-cta", showSticky);
+      }
+      if (fabCall) {
+        const showFab = scrolled && !nearContacts && !mobile;
+        fabCall.classList.toggle("is-hidden", !showFab);
+        fabCall.toggleAttribute("hidden", !showFab);
+      }
+    };
+    updateChromeCtas();
+    window.addEventListener("scroll", updateChromeCtas, { passive: true });
+    window.addEventListener("resize", updateChromeCtas);
+  }
+
+  /* Services carousel: drag + arrows + infinite loop */
   const carousel = document.querySelector("[data-services-carousel]");
   const track = document.querySelector("[data-services-track]");
   const nav = document.querySelector("[data-services-nav]");
 
   if (carousel && track) {
+    const originals = [...track.querySelectorAll(".service-slide")];
+    if (originals.length && track.dataset.loopReady !== "1") {
+      originals.forEach((slide) => {
+        const clone = slide.cloneNode(true);
+        clone.setAttribute("aria-hidden", "true");
+        clone.tabIndex = -1;
+        track.appendChild(clone);
+      });
+      track.dataset.loopReady = "1";
+    }
+
     let offset = 0;
     let startX = 0;
     let startOffset = 0;
     let dragging = false;
     let moved = false;
-
-    const maxOffset = () => {
-      const overflow = track.scrollWidth - carousel.clientWidth;
-      return Math.max(0, overflow);
-    };
-
-    const apply = (value, animate = true) => {
-      offset = Math.max(0, Math.min(maxOffset(), value));
-      track.style.transition = animate ? "" : "none";
-      track.style.transform = `translate3d(${-offset}px, 0, 0)`;
-    };
+    let busy = false;
 
     const step = () => {
       const card = track.querySelector(".service-slide");
       if (!card) return 320;
-      const styles = getComputedStyle(track);
-      const gap = parseFloat(styles.gap) || 20;
+      const gap = parseFloat(getComputedStyle(track).gap) || 20;
       return card.getBoundingClientRect().width + gap;
+    };
+
+    const setWidth = () => {
+      const slides = track.querySelectorAll(".service-slide");
+      const first = slides[0];
+      const clone = slides[originals.length];
+      if (!first || !clone) return originals.length * step();
+      return clone.offsetLeft - first.offsetLeft;
+    };
+    const render = (value, animate = true) => {
+      offset = value;
+      track.style.transition = animate ? "" : "none";
+      track.style.transform = `translate3d(${-offset}px, 0, 0)`;
+      if (!animate) {
+        void track.offsetWidth;
+        track.style.transition = "";
+      }
+    };
+
+    const normalize = () => {
+      const one = setWidth();
+      if (one <= 0) return;
+      while (offset >= one) render(offset - one, false);
+      while (offset < 0) render(offset + one, false);
+    };
+
+    const moveBy = (dir) => {
+      if (busy) return;
+      const one = setWidth();
+      if (one <= 0) return;
+      busy = true;
+      render(offset + dir * step(), true);
+      window.setTimeout(() => {
+        normalize();
+        busy = false;
+      }, 520);
     };
 
     nav?.querySelectorAll("[data-dir]").forEach((btn) => {
       btn.addEventListener("click", () => {
-        const dir = Number(btn.getAttribute("data-dir") || 1);
-        apply(offset + dir * step() * 1.05, true);
+        moveBy(Number(btn.getAttribute("data-dir") || 1));
       });
     });
 
     const onPointerDown = (e) => {
       if (e.pointerType === "mouse" && e.button !== 0) return;
+      if (busy) return;
       dragging = true;
       moved = false;
       startX = e.clientX;
@@ -225,14 +314,27 @@
       if (!dragging) return;
       const dx = e.clientX - startX;
       if (Math.abs(dx) > 4) moved = true;
-      apply(startOffset - dx, false);
+      render(startOffset - dx, false);
     };
 
     const onPointerUp = (e) => {
       if (!dragging) return;
       dragging = false;
       carousel.classList.remove("is-dragging");
-      apply(offset, true);
+      const traveled = offset - startOffset;
+
+      if (moved && Math.abs(traveled) > 40) {
+        const dir = traveled > 0 ? 1 : -1;
+        busy = true;
+        render(startOffset + dir * step(), true);
+        window.setTimeout(() => {
+          normalize();
+          busy = false;
+        }, 520);
+      } else {
+        render(startOffset, true);
+      }
+
       if (moved) {
         const blockClick = (ev) => {
           ev.preventDefault();
@@ -247,7 +349,10 @@
     carousel.addEventListener("pointermove", onPointerMove);
     carousel.addEventListener("pointerup", onPointerUp);
     carousel.addEventListener("pointercancel", onPointerUp);
-    window.addEventListener("resize", () => apply(offset, false));
+    window.addEventListener("resize", () => {
+      normalize();
+      render(offset, false);
+    });
   }
 
   /* Marquee: duplicate groups for seamless loop */
