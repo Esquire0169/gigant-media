@@ -325,6 +325,7 @@ window.GM_CONTENT = {
       "footer.contacts": "Контакты",
       "footer.copy": "© GIGANT MEDIA",
       "footer.note": "Full-cycle advertising production · Uzbekistan",
+      "footer.dev": "Разработка и продвижение сайта — <a href=\"https://t.me/webgiants\" target=\"_blank\" rel=\"noopener noreferrer\">t.me/webgiants</a>",
 
       "calc.skip": "К калькулятору",
       "calc.eyebrow": "Расчёт стоимости",
@@ -639,6 +640,7 @@ window.GM_CONTENT = {
       "footer.contacts": "Contacts",
       "footer.copy": "© GIGANT MEDIA",
       "footer.note": "Full-cycle advertising production · Uzbekistan",
+      "footer.dev": "Website development &amp; promotion — <a href=\"https://t.me/webgiants\" target=\"_blank\" rel=\"noopener noreferrer\">t.me/webgiants</a>",
 
       "calc.skip": "To calculator",
       "calc.eyebrow": "Cost estimate",
@@ -953,6 +955,7 @@ window.GM_CONTENT = {
       "footer.contacts": "Aloqa",
       "footer.copy": "© GIGANT MEDIA",
       "footer.note": "To‘liq tsikli reklama ishlab chiqarish · O‘zbekiston",
+      "footer.dev": "Sayt ishlab chiqish va targ‘iboti — <a href=\"https://t.me/webgiants\" target=\"_blank\" rel=\"noopener noreferrer\">t.me/webgiants</a>",
 
       "calc.skip": "Kalkulyatorga",
       "calc.eyebrow": "Narx hisobi",
