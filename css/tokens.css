@@ -62,3 +62,7 @@
     --chrome-h: calc(var(--topbar-h) + var(--header-h));
   }
 }
+
+body.no-topbar {
+  --topbar-h: 0px;
+}

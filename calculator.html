@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Калькулятор стоимости — GIGANT MEDIA</title>
+  <meta name="description" content="Официальный калькулятор стоимости рекламной продукции GIGANT MEDIA: визитки, щиты, баннеры и прочие изделия." />
+  <link rel="canonical" href="https://esquire0169.github.io/gigant-media/calculator.html" />
+  <meta name="theme-color" content="#ACD03A" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/tokens.css" />
+  <link rel="stylesheet" href="css/base.css" />
+  <link rel="stylesheet" href="css/components.css" />
+  <link rel="stylesheet" href="css/pages.css" />
+  <link rel="stylesheet" href="css/strict.css" />
+  <link rel="stylesheet" href="css/calculator.css" />
+</head>
+<body class="no-topbar" data-page="calculator">
+  <a class="skip-link" href="#calculator" data-i18n="calc.skip">К калькулятору</a>
+
+  <header class="site-header is-scrolled">
+    <div class="container container--wide site-header__inner">
+      <a class="logo" href="index.html" aria-label="GIGANT MEDIA">
+        <img class="logo__img" src="assets/brand/logo-dark.svg?v=2" alt="best GIGANT media" width="200" height="52" />
+      </a>
+      <nav class="nav" data-i18n-aria="nav.menu">
+        <a href="index.html#services" data-i18n="nav.services">Услуги</a>
+        <a href="index.html#cases" data-i18n="nav.cases">Кейсы</a>
+        <a class="is-active" href="calculator.html" data-i18n="nav.calc">Калькулятор</a>
+        <a href="index.html#contacts" data-i18n="nav.contacts">Контакты</a>
+      </nav>
+      <div class="header-actions">
+        <div class="lang-switch" role="group" data-i18n-aria="lang.label">
+          <button type="button" class="lang-switch__btn" data-lang-option="ru" aria-pressed="true">RU</button>
+          <button type="button" class="lang-switch__btn" data-lang-option="en" aria-pressed="false">EN</button>
+          <button type="button" class="lang-switch__btn" data-lang-option="uz" aria-pressed="false">UZ</button>
+        </div>
+        <div class="header-cta">
+          <a class="btn btn--primary" href="index.html#contacts" data-i18n="nav.cta">Получить расчёт</a>
+        </div>
+        <button class="menu-toggle" type="button" data-i18n-aria="nav.open" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="calc-page" id="calculator">
+      <div class="container">
+        <div class="calc-page__head">
+          <p class="eyebrow" data-i18n="calc.eyebrow">Расчёт стоимости</p>
+          <h1 class="h1" data-i18n="calc.title">Калькулятор стоимости</h1>
+          <p class="lead" data-i18n="calc.lead">Официальный расчёт стоимости рекламной продукции. Выберите тип изделия и параметры. Итоговая цена обновляется автоматически.</p>
+        </div>
+
+        <div class="calc-layout" data-calculator>
+          <div class="calc-panel">
+            <div class="calc-section">
+              <p class="calc-section__title" data-calc-section-type>Тип продукции</p>
+              <div class="calc-types" data-calc-types></div>
+            </div>
+
+            <div class="calc-section">
+              <p class="calc-section__title" data-calc-section-main>Основные параметры</p>
+              <div class="calc-fields" data-calc-fields></div>
+            </div>
+
+            <div class="calc-section" data-calc-extras></div>
+            <div class="calc-section" data-calc-install></div>
+            <div class="calc-section" data-calc-delivery></div>
+
+            <p class="calc-note" data-calc-note></p>
+          </div>
+
+          <aside class="calc-summary" aria-live="polite">
+            <p class="calc-summary__label" data-calc-summary-label>Расчёт</p>
+            <p class="calc-summary__product" data-calc-product>Визитки</p>
+            <ul class="calc-summary__list" data-calc-list></ul>
+            <p class="calc-summary__total-label" data-calc-total-label>Итоговая цена</p>
+            <p class="calc-summary__total" data-calc-total>0 ₽</p>
+            <p class="calc-summary__total-alt" data-calc-total-alt></p>
+            <p class="calc-summary__hint" data-calc-hint>Ориентировочная стоимость. Финальная цена подтверждается после согласования макета и условий работ. Курсы валют — справочные.</p>
+            <button class="btn btn--primary" type="button" data-calc-open-request>Оставить заявку</button>
+            <a class="btn btn--secondary" href="https://wa.me/998908056692" target="_blank" rel="noopener" data-calc-wa>Отправить расчёт в WhatsApp</a>
+
+            <div class="calc-request" data-calc-request>
+              <form data-calc-form novalidate>
+                <div class="field">
+                  <label for="calc-name">Имя</label>
+                  <input id="calc-name" name="name" type="text" autocomplete="name" required />
+                </div>
+                <div class="field">
+                  <label for="calc-phone">Телефон</label>
+                  <input id="calc-phone" name="phone" type="tel" autocomplete="tel" inputmode="tel" required />
+                </div>
+                <div class="field">
+                  <label for="calc-comment">Комментарий</label>
+                  <textarea id="calc-comment" name="comment" placeholder="Адрес объекта, сроки, дополнительные требования"></textarea>
+                </div>
+                <button class="btn btn--primary" type="submit">Оставить заявку</button>
+                <p class="calc-request__status" data-calc-status></p>
+              </form>
+            </div>
+          </aside>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-bottom" style="border:0;padding-top:0;">
+      <a href="index.html" data-i18n="calc.home">На главную</a>
+      <span data-i18n="calc.footer">GIGANT MEDIA · Калькулятор стоимости</span>
+    </div>
+  </footer>
+
+  <script src="js/content.js"></script>
+  <script src="js/i18n.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/calculator.js"></script>
+</body>
+</html>
