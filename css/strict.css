@@ -1,15 +1,76 @@
 /* Strict industrial block system — overrides softer page styles */
 
-/* ---- Hero ---- */
+/* ---- Hero (dark cinematic / gold) ---- */
 .hero {
-  background: var(--color-bg) !important;
-  border-bottom: 1px solid var(--color-line);
+  background:
+    linear-gradient(180deg, rgba(247, 245, 240, 0) 90%, rgba(247, 245, 240, 0.55) 96%, #f7f5f0 100%),
+    radial-gradient(ellipse 60% 55% at 82% 18%, rgba(201, 161, 91, 0.22), transparent 60%),
+    radial-gradient(ellipse 55% 60% at 8% 92%, rgba(201, 161, 91, 0.1), transparent 65%),
+    linear-gradient(155deg, #1c1712 0%, #14110d 55%, #0e0c09 100%) !important;
+  border-bottom: 0;
+}
+
+/* Stray lines and the compass roundel — gone */
+.hero .pattern-grid,
+.hero-arch-motif,
+.hero-ceramic-accent {
+  display: none;
+}
+
+.hero .eyebrow { color: var(--color-primary); }
+.hero .eyebrow::before { background: var(--color-primary); }
+.hero__copy .h1 { color: #f5f1e8; }
+.hero__copy .lead { color: rgba(245, 241, 232, 0.68); }
+
+.hero .chip {
+  background: rgba(255, 255, 255, 0.05);
+  border-color: rgba(201, 161, 91, 0.28);
+  color: #f5f1e8;
+  backdrop-filter: blur(10px);
+}
+
+.hero .hero__float.chip {
+  padding: 14px 18px;
+  border-radius: 14px !important;
+  background: rgba(20, 17, 13, 0.65);
+  border: 1px solid rgba(201, 161, 91, 0.4) !important;
+  backdrop-filter: blur(18px) saturate(150%);
+  box-shadow: 0 24px 48px -20px rgba(0, 0, 0, 0.55);
+  font-size: 12px;
+}
+
+.hero .trust-strip li {
+  background: rgba(255, 255, 255, 0.05);
+  border-color: rgba(201, 161, 91, 0.22);
+  color: rgba(245, 241, 232, 0.75);
+}
+
+.hero .btn--secondary {
+  color: #f5f1e8;
+  border-color: rgba(245, 241, 232, 0.28);
+}
+
+.hero .btn--secondary:hover {
+  border-color: rgba(245, 241, 232, 0.75);
+  background: rgba(255, 255, 255, 0.04);
 }
 
 .hero__frame {
-  border-radius: 0 !important;
-  box-shadow: none !important;
-  border: 1px solid var(--color-line);
+  border-radius: clamp(48px, 6vw, 110px) clamp(48px, 6vw, 110px) 20px 20px !important;
+  border: 1px solid rgba(201, 161, 91, 0.35) !important;
+  box-shadow: 0 50px 90px -35px rgba(0, 0, 0, 0.6) !important;
+  position: relative;
+}
+
+.hero__frame::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  background: linear-gradient(105deg, transparent 30%, rgba(255, 255, 255, 0.13) 48%, rgba(255, 255, 255, 0.03) 56%, transparent 70%);
+  transform: translateX(-130%);
+  animation: sheenSweep 9s ease-in-out 2.8s infinite;
+  pointer-events: none;
 }
 
 .hero__float--a { left: 0; }
@@ -20,9 +81,29 @@
   mask-image: linear-gradient(90deg, #000 0%, transparent 72%) !important;
 }
 
+.hero .pattern-grid {
+  background-image:
+    linear-gradient(rgba(201, 161, 91, 0.1) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(201, 161, 91, 0.1) 1px, transparent 1px) !important;
+}
+
+.hero-arch-motif {
+  position: absolute;
+  pointer-events: none;
+  z-index: 0;
+  opacity: 0.34;
+}
+
+.hero-ceramic-accent {
+  position: absolute;
+  pointer-events: none;
+  z-index: 0;
+  opacity: 0.32;
+}
+
 /* ---- About ---- */
 .about-section {
-  background: var(--color-bg) !important;
+  background: transparent !important;
 }
 
 .about-regions__label {
@@ -32,7 +113,7 @@
 }
 
 .about-regions__list li {
-  border-radius: 0 !important;
+  border-radius: 10px !important;
   box-shadow: none !important;
   background: var(--color-bg-elevated) !important;
   min-height: 0;
@@ -45,7 +126,7 @@
 
 .about-visual__main,
 .about-visual__side {
-  border-radius: 0 !important;
+  border-radius: 18px !important;
   box-shadow: none !important;
   border: 1px solid var(--color-line);
 }
@@ -60,17 +141,17 @@
 
 /* ---- Team ---- */
 .team-section {
-  background: var(--color-bg) !important;
-  border-block: 1px solid var(--color-line);
+  background: transparent !important;
+  border-block: 0;
 }
 
 .team-slot__frame {
-  border-radius: 0 !important;
+  border-radius: 14px !important;
 }
 
 /* ---- Services ---- */
 .service-slide {
-  border-radius: 0 !important;
+  border-radius: 18px !important;
   box-shadow: none !important;
   border: 1px solid var(--color-line);
   background: var(--color-bg-elevated);
@@ -78,31 +159,31 @@
 
 .service-slide__media,
 .service-slide__media img {
-  border-radius: 0 !important;
+  border-radius: 12px !important;
 }
 
 .service-slide__name span {
-  border-radius: 0 !important;
+  border-radius: 50% !important;
   width: 32px !important;
   height: 32px !important;
   font-size: 12px !important;
 }
 
 .service-slide__benefit {
-  border-radius: 0 !important;
+  border-radius: 999px !important;
   letter-spacing: 0.06em;
   text-transform: uppercase;
   font-size: 10px !important;
 }
 
 .carousel-btn {
-  border-radius: 0 !important;
+  border-radius: 50% !important;
   box-shadow: none !important;
 }
 
 /* ---- Partners ---- */
 .partner-card {
-  border-radius: 0 !important;
+  border-radius: 14px !important;
   box-shadow: none !important;
   border: 1px solid var(--color-line);
   background: var(--color-bg);
@@ -110,27 +191,27 @@
 
 /* ---- Cases ---- */
 .cases-section {
-  background: var(--color-bg);
+  background: transparent !important;
 }
 
 .cases-grid {
   gap: 1px !important;
   background: var(--color-line);
   border: 1px solid var(--color-line);
+  border-radius: 22px;
+  overflow: hidden;
 }
 
 .case-card {
   border-radius: 0 !important;
-  box-shadow: none !important;
   border: 0 !important;
   background: var(--color-bg-elevated) !important;
-  transform: none !important;
 }
 
 a.case-card:hover {
-  transform: none !important;
-  box-shadow: none !important;
-  background: #eef0ea !important;
+  transform: translateY(-4px) !important;
+  box-shadow: var(--shadow-hover) !important;
+  background: #f8f5ee !important;
 }
 
 .case-card__media {
@@ -138,7 +219,7 @@ a.case-card:hover {
 }
 
 .case-card__index {
-  border-radius: 0 !important;
+  border-radius: 999px !important;
   left: 12px;
   bottom: 12px;
   letter-spacing: 0.14em;
@@ -152,14 +233,16 @@ a.case-card:hover {
 
 /* ---- Process ---- */
 .process {
-  background: var(--color-bg) !important;
-  border-block: 1px solid var(--color-line);
+  background: transparent !important;
+  border-block: 0;
 }
 
 .process-track {
   gap: 1px !important;
   background: var(--color-line);
   border: 1px solid var(--color-line);
+  border-radius: 22px;
+  overflow: hidden;
   position: relative;
 }
 
@@ -217,14 +300,16 @@ a.case-card:hover {
 
 /* ---- Numbers ---- */
 .numbers {
-  background: var(--color-bg-elevated) !important;
-  border-block: 1px solid var(--color-line);
+  background: transparent !important;
+  border-block: 0;
 }
 
 .numbers-grid {
   gap: 1px !important;
   background: var(--color-line);
   border: 1px solid var(--color-line);
+  border-radius: 22px;
+  overflow: hidden;
 }
 
 .number-card {
@@ -241,7 +326,7 @@ a.case-card:hover {
 
 /* ---- Advantages ---- */
 .advantages {
-  background: var(--color-bg) !important;
+  background: transparent !important;
   border-block: 0;
 }
 
@@ -250,6 +335,8 @@ a.case-card:hover {
   gap: 1px;
   background: var(--color-line);
   border: 1px solid var(--color-line);
+  border-radius: 22px;
+  overflow: hidden;
 }
 
 .advantage-pillar {
@@ -259,7 +346,7 @@ a.case-card:hover {
 }
 
 .advantage-pillar:hover {
-  background: #eef0ea !important;
+  background: #f4f0e7 !important;
 }
 
 .advantage-pillar--lg {
@@ -277,14 +364,16 @@ a.case-card:hover {
 
 /* ---- Reviews (asymmetric but same language) ---- */
 .reviews-section {
-  background: var(--color-bg);
-  border-top: 1px solid var(--color-line);
+  background: transparent !important;
+  border-top: 0;
 }
 
 .reviews-layout {
   gap: 1px !important;
   background: var(--color-line);
   border: 1px solid var(--color-line);
+  border-radius: 22px;
+  overflow: hidden;
 }
 
 .review-feature {
@@ -352,24 +441,24 @@ a.case-card:hover {
 
 /* ---- FAQ ---- */
 .faq-item {
-  border-radius: 0 !important;
+  border-radius: 14px !important;
   box-shadow: none !important;
   background: var(--color-bg-elevated) !important;
 }
 
 .faq-item[open] {
-  box-shadow: none !important;
+  box-shadow: var(--shadow-card) !important;
 }
 
 .faq-item__icon {
-  border-radius: 0 !important;
+  border-radius: 50% !important;
   background: transparent !important;
   border: 1px solid var(--color-line);
 }
 
 /* ---- Contact / CTA ---- */
 .cta-band {
-  border-radius: 0 !important;
+  border-radius: 28px !important;
   box-shadow: none !important;
   background: var(--color-surface-dark) !important;
 }
@@ -382,32 +471,67 @@ a.case-card:hover {
 .cta-band .field input,
 .cta-band .field textarea,
 .cta-band .field select {
-  border-radius: 0 !important;
+  border-radius: 12px !important;
   box-shadow: none !important;
 }
 
 .quick-btn {
-  border-radius: 0 !important;
+  border-radius: 999px !important;
 }
 
 .funnel-cta__band,
+.download-band {
+  border-radius: 18px !important;
+}
+
 .services-more__item,
 .hero__segments a,
-.sticky-cta,
-.form-success,
-.download-band,
+.services-all__list a {
+  border-radius: 999px !important;
+}
+
+.sticky-cta {
+  border-radius: 16px !important;
+}
+
+.form-success {
+  border-radius: 12px !important;
+}
+
 .mosaic__cell,
-.fab-call,
-.topbar__social a,
-.about-regions__list--tiles li,
-.audience-card,
-.service-card,
-.services-all,
-.services-all__list a,
 .contact-media,
-.trust-strip li,
+.services-all,
 .workshop-grid__item {
-  border-radius: 0 !important;
+  border-radius: 14px !important;
+  overflow: hidden;
+}
+
+.fab-call {
+  border-radius: 50% !important;
+}
+
+.topbar__social a {
+  border-radius: 8px !important;
+}
+
+.about-regions__list--tiles li,
+.trust-strip li {
+  border-radius: 10px !important;
+}
+
+.audience-card,
+.service-card {
+  border-radius: 16px !important;
+}
+
+.service-card__media {
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.panel-grid {
+  border-radius: 22px;
+  overflow: hidden;
 }
 
 .sticky-cta,
@@ -417,12 +541,12 @@ a.case-card:hover {
 
 /* ---- Inner pages leftovers ---- */
 .benefit-card {
-  border-radius: 0 !important;
+  border-radius: 16px !important;
   box-shadow: none !important;
 }
 
 .case-hero-media {
-  border-radius: 0 !important;
+  border-radius: 20px !important;
   box-shadow: none !important;
   border: 1px solid var(--color-line);
 }
@@ -431,5 +555,484 @@ a.case-card:hover {
 .gallery__side > div,
 .gallery__side img,
 .gallery__main img {
-  border-radius: 0 !important;
+  border-radius: 16px !important;
+}
+
+/* ==========================================================================
+   Ornament system — Uzbek geometry as engraving, not decoration.
+   Three motifs (eight-point star, quadrant cross, arch), gold hairline,
+   4–7% opacity, one per section at most, cropped at the edges.
+   ========================================================================== */
+.about-section,
+.numbers,
+.process,
+.site-footer {
+  position: relative;
+  overflow: hidden;
+}
+
+.about-section::after,
+.numbers::before,
+.process::after,
+.site-footer::before,
+.cta-band::after {
+  content: "";
+  position: absolute;
+  pointer-events: none;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+/* Eight-point star — about, bottom-right, bleeding off canvas */
+.about-section::after {
+  width: clamp(280px, 32vw, 460px);
+  height: clamp(280px, 32vw, 460px);
+  right: -6%;
+  bottom: -18%;
+  opacity: 0.14;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 480 480' fill='none' stroke='%23C9A15B' stroke-width='1.5'%3E%3Crect x='90' y='90' width='300' height='300'/%3E%3Crect x='90' y='90' width='300' height='300' transform='rotate(45 240 240)'/%3E%3C/svg%3E");
+}
+
+/* Quadrant cross — numbers, top-right corner */
+.numbers::before {
+  width: clamp(240px, 26vw, 380px);
+  height: clamp(240px, 26vw, 380px);
+  right: -4%;
+  top: -22%;
+  opacity: 0.14;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 480 480' fill='none' stroke='%23C9A15B' stroke-width='1.5'%3E%3Crect x='60' y='185' width='360' height='110' rx='55'/%3E%3Crect x='185' y='60' width='110' height='360' rx='55'/%3E%3C/svg%3E");
+}
+
+/* Arch — process, bottom-left, rising from the baseline */
+.process::after {
+  width: clamp(260px, 28vw, 420px);
+  height: clamp(260px, 28vw, 420px);
+  left: -5%;
+  bottom: -34%;
+  opacity: 0.12;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 480 480' fill='none' stroke='%23C9A15B' stroke-width='1.5'%3E%3Cpath d='M100 460 V220 A140 140 0 0 1 380 220 V460'/%3E%3C/svg%3E");
+}
+
+/* Star again on the dark contact band — slightly stronger to survive the dark ground */
+.cta-band::after {
+  width: clamp(280px, 30vw, 440px);
+  height: clamp(280px, 30vw, 440px);
+  left: -8%;
+  bottom: -26%;
+  opacity: 0.2;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 480 480' fill='none' stroke='%23C9A15B' stroke-width='1.5'%3E%3Crect x='90' y='90' width='300' height='300'/%3E%3Crect x='90' y='90' width='300' height='300' transform='rotate(45 240 240)'/%3E%3C/svg%3E");
+}
+
+/* Arch — footer, far right, barely there */
+.site-footer::before {
+  width: clamp(220px, 24vw, 360px);
+  height: clamp(220px, 24vw, 360px);
+  right: -4%;
+  bottom: -30%;
+  opacity: 0.11;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 480 480' fill='none' stroke='%23C9A15B' stroke-width='1.5'%3E%3Cpath d='M100 460 V220 A140 140 0 0 1 380 220 V460'/%3E%3C/svg%3E");
+}
+
+@media (max-width: 720px) {
+  .about-section::after,
+  .numbers::before,
+  .process::after,
+  .site-footer::before,
+  .cta-band::after {
+    display: none;
+  }
+}
+
+/* ==========================================================================
+   Hero entrance — staggered choreography instead of one monolithic fade
+   ========================================================================== */
+.hero__copy.reveal {
+  opacity: 1;
+  transform: none;
+  transition: none;
+}
+
+.hero__copy.reveal > * {
+  opacity: 0;
+  transform: translateY(22px);
+  transition:
+    opacity var(--dur-reveal) var(--ease-standard),
+    transform var(--dur-reveal) var(--ease-standard);
+}
+
+.hero__copy.reveal.is-in > * {
+  opacity: 1;
+  transform: none;
+}
+
+.hero__copy.reveal.is-in > *:nth-child(2) { transition-delay: 80ms; }
+.hero__copy.reveal.is-in > *:nth-child(3) { transition-delay: 160ms; }
+.hero__copy.reveal.is-in > *:nth-child(4) { transition-delay: 240ms; }
+.hero__copy.reveal.is-in > *:nth-child(5) { transition-delay: 320ms; }
+.hero__copy.reveal.is-in > *:nth-child(6) { transition-delay: 400ms; }
+
+.hero__visual.reveal {
+  transition-delay: 200ms;
+}
+
+/* Floating stat chips settle in last */
+.hero__visual.reveal .hero__float {
+  opacity: 0;
+  transform: translateY(16px);
+  transition:
+    opacity var(--dur-reveal) var(--ease-standard) 550ms,
+    transform var(--dur-reveal) var(--ease-spring) 550ms;
+}
+
+.hero__visual.reveal.is-in .hero__float {
+  opacity: 1;
+  transform: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero__visual.reveal .hero__float {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}
+
+/* ==========================================================================
+   Micro-interactions for sections that were still static
+   ========================================================================== */
+a.service-card {
+  transition:
+    transform var(--dur-base) var(--ease-standard),
+    box-shadow var(--dur-base) var(--ease-standard),
+    border-color var(--dur-base) var(--ease-standard);
+}
+
+a.service-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-hover);
+}
+
+.service-card__media img {
+  transition: transform var(--dur-slow) var(--ease-standard);
+}
+
+a.service-card:hover .service-card__media img {
+  transform: scale(1.04);
+}
+
+.audience-card {
+  transition:
+    border-color var(--dur-base) var(--ease-standard),
+    background var(--dur-base) var(--ease-standard);
+}
+
+.audience-card:hover {
+  border-color: color-mix(in srgb, var(--color-primary) 35%, var(--color-line));
+  background: #fdfcf9;
+}
+
+.workshop-grid__item img {
+  transition: transform var(--dur-slow) var(--ease-standard);
+}
+
+.workshop-grid__item:hover img {
+  transform: scale(1.03);
+}
+
+/* Diamond bullets everywhere the brand marks a list item */
+.trust-strip li::before,
+.contact-trust li::before {
+  transform: rotate(45deg);
+  width: 7px !important;
+  height: 7px !important;
+}
+
+/* ==========================================================================
+   Girih field — seamless eight-point-star lattice as a visible texture.
+   One tile = star at center + quarter-stars at corners; repeats every 260px.
+   ========================================================================== */
+:root {
+  --girih-tile: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='260' height='260' viewBox='0 0 260 260'%3E%3Cdefs%3E%3Cg id='s' fill='none' stroke='%23C9A15B' stroke-width='1.7'%3E%3Crect x='76' y='76' width='108' height='108'/%3E%3Crect x='76' y='76' width='108' height='108' transform='rotate(45 130 130)'/%3E%3C/g%3E%3C/defs%3E%3Cuse href='%23s'/%3E%3Cuse href='%23s' x='-130' y='-130'/%3E%3Cuse href='%23s' x='130' y='-130'/%3E%3Cuse href='%23s' x='-130' y='130'/%3E%3Cuse href='%23s' x='130' y='130'/%3E%3C/svg%3E");
+}
+
+/* Lift section content above the texture layer; clip drifting decor */
+.section {
+  position: relative;
+  overflow: hidden;
+}
+
+.section > .container {
+  position: relative;
+  z-index: 1;
+}
+
+/* One continuous texture field behind the whole page — never breaks between blocks */
+body {
+  background: var(--color-bg);
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: -140px;
+  z-index: -1;
+  pointer-events: none;
+  background-image: var(--girih-tile);
+  background-size: 260px 260px;
+  opacity: 0.13;
+  animation: girihDrift 60s ease-in-out infinite;
+}
+
+body::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  background:
+    radial-gradient(ellipse 60% 45% at 85% 6%, rgba(201, 161, 91, 0.1), transparent 60%),
+    radial-gradient(ellipse 55% 40% at 4% 96%, rgba(216, 195, 165, 0.14), transparent 60%);
+}
+
+@keyframes girihDrift {
+  0%, 100% { transform: translate3d(0, 0, 0); }
+  50% { transform: translate3d(-44px, -32px, 0); }
+}
+
+/* Content sits above texture and glows */
+.marquee {
+  position: relative;
+  z-index: 1;
+}
+
+/* Unify section grounds — transparent over one continuous body field */
+.number-card {
+  background: var(--color-bg-elevated) !important;
+}
+
+.workshop-section {
+  background: transparent !important;
+  border-block: 0 !important;
+}
+
+.campaigns-section,
+.audience-section,
+.services-section,
+.funnel-cta,
+.funnel-cta--soft,
+#faq.section,
+#contacts.section {
+  background: transparent !important;
+}
+
+/* Ambient glows — slow gold light drifting through each section */
+.ambient-glow {
+  position: absolute;
+  z-index: 0;
+  top: -12%;
+  right: -14%;
+  width: min(54vw, 660px);
+  aspect-ratio: 1;
+  pointer-events: none;
+  background: radial-gradient(circle, rgba(201, 161, 91, 0.22), transparent 62%);
+  animation: glowDrift 26s ease-in-out infinite;
+}
+
+.ambient-glow--alt {
+  top: auto;
+  right: auto;
+  bottom: -16%;
+  left: -12%;
+  animation-duration: 34s;
+  animation-delay: -9s;
+}
+
+.hero .ambient-glow {
+  background: radial-gradient(circle, rgba(201, 161, 91, 0.3), transparent 60%);
+}
+
+@keyframes glowDrift {
+  0%, 100% { transform: translate3d(0, 0, 0) scale(1); opacity: 0.75; }
+  50% { transform: translate3d(-7%, 6%, 0) scale(1.14); opacity: 1; }
+}
+
+/* Hero: full girih field fading toward the text side + one oversized star */
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  background-image: var(--girih-tile);
+  background-size: 320px 320px;
+  opacity: 0.17;
+  mask-image: linear-gradient(105deg, transparent 30%, #000 62%);
+  -webkit-mask-image: linear-gradient(105deg, transparent 30%, #000 62%);
+}
+
+.hero::after {
+  content: "";
+  position: absolute;
+  z-index: 0;
+  pointer-events: none;
+  width: clamp(420px, 46vw, 700px);
+  height: clamp(420px, 46vw, 700px);
+  top: -14%;
+  right: -9%;
+  opacity: 0.22;
+  animation: starSpin 120s linear infinite;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 480 480' fill='none' stroke='%23C9A15B' stroke-width='1.2'%3E%3Crect x='104' y='104' width='272' height='272'/%3E%3Crect x='104' y='104' width='272' height='272' transform='rotate(45 240 240)'/%3E%3Crect x='138' y='138' width='204' height='204'/%3E%3Crect x='138' y='138' width='204' height='204' transform='rotate(45 240 240)'/%3E%3C/svg%3E");
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.hero .hero__grid {
+  z-index: 1;
+}
+
+@keyframes starSpin {
+  to { transform: rotate(360deg); }
+}
+
+@media (max-width: 720px) {
+  .hero::after {
+    width: 320px;
+    height: 320px;
+    top: -8%;
+    right: -22%;
+    opacity: 0.14;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  body::before,
+  .ambient-glow,
+  .hero::after,
+  .hero__frame::before,
+  .hero-ceramic-accent svg,
+  .hero-arch-motif,
+  .eyebrow::before,
+  .hero .btn--primary,
+  .hero__float {
+    animation: none !important;
+  }
+}
+
+/* Inner pages join the same continuous field */
+.page-hero {
+  background: transparent !important;
+  position: relative;
+  overflow: hidden;
+}
+
+.page-hero > .container {
+  position: relative;
+  z-index: 1;
+}
+
+/* Footer flows out of the same field — no separator, no tone change */
+.site-footer {
+  background: transparent !important;
+  border-top: 0 !important;
+}
+
+/* ==========================================================================
+   Alive layer — perpetual gentle motion
+   ========================================================================== */
+@keyframes slowSpin {
+  to { transform: rotate(360deg); }
+}
+
+@keyframes slowSpinRev {
+  to { transform: rotate(-360deg); }
+}
+
+@keyframes archSway {
+  0%, 100% { transform: rotate(-7deg); }
+  50% { transform: rotate(7deg); }
+}
+
+/* Background motifs wander at their own uneven pace */
+.about-section::after { animation: slowSpin 150s linear infinite; }
+.numbers::before { animation: slowSpinRev 170s linear infinite; }
+.process::after { animation: archSway 26s ease-in-out infinite; }
+.cta-band::after { animation: slowSpinRev 140s linear infinite; }
+.site-footer::before { animation: archSway 34s ease-in-out infinite; }
+@keyframes sheenSweep {
+  0% { transform: translateX(-130%); }
+  30% { transform: translateX(130%); }
+  100% { transform: translateX(130%); }
+}
+
+@keyframes floatBob {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-9px); }
+}
+
+.hero__visual.reveal.is-in .hero__float--a {
+  animation: floatBob 7s ease-in-out 2.4s infinite;
+}
+
+.hero__visual.reveal.is-in .hero__float--b {
+  animation: floatBob 8s ease-in-out 3.1s infinite;
+}
+
+@keyframes diamondPulse {
+  0%, 100% { transform: rotate(45deg) scale(1); opacity: 1; }
+  50% { transform: rotate(45deg) scale(1.3); opacity: 0.55; }
+}
+
+.eyebrow::before {
+  animation: diamondPulse 3.8s ease-in-out infinite;
+}
+
+@keyframes spinReverse {
+  to { transform: rotate(-360deg); }
+}
+
+.hero-ceramic-accent svg {
+  animation: spinReverse 160s linear infinite;
+}
+
+@keyframes archBreathe {
+  0%, 100% { opacity: 0.34; }
+  50% { opacity: 0.16; }
+}
+
+.hero-arch-motif {
+  animation: archBreathe 11s ease-in-out infinite;
+}
+
+@keyframes ctaGlow {
+  0%, 100% { box-shadow: 0 0 0 rgba(201, 161, 91, 0); }
+  50% { box-shadow: 0 14px 34px -10px rgba(201, 161, 91, 0.55); }
+}
+
+.hero .btn--primary {
+  animation: ctaGlow 5.5s ease-in-out 2.5s infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .eyebrow::before,
+  .hero-arch-motif,
+  .hero-ceramic-accent svg,
+  .hero .btn--primary,
+  .hero__visual.reveal.is-in .hero__float--a,
+  .hero__visual.reveal.is-in .hero__float--b,
+  .about-section::after,
+  .numbers::before,
+  .process::after,
+  .cta-band::after,
+  .site-footer::before {
+    animation: none !important;
+  }
+}
+
+/* ==========================================================================
+   Accessibility on dark surfaces
+   ========================================================================== */
+.hero :focus-visible,
+.cta-band :focus-visible,
+.site-footer :focus-visible {
+  outline-color: var(--color-primary);
 }

@@ -53,6 +53,10 @@ ul, ol {
   outline-offset: 3px;
 }
 
+::selection {
+  background: rgba(201, 161, 91, 0.3);
+}
+
 .container {
   width: min(100% - var(--gutter) * 2, var(--container));
   margin-inline: auto;
@@ -84,9 +88,9 @@ ul, ol {
 
 .eyebrow::before {
   content: "";
-  width: 7px;
-  height: 7px;
-  border-radius: 50%;
+  width: 6px;
+  height: 6px;
+  transform: rotate(45deg);
   background: var(--color-primary);
   flex-shrink: 0;
 }
@@ -96,6 +100,7 @@ ul, ol {
   line-height: 1.05;
   font-weight: var(--fw-bold);
   letter-spacing: -0.03em;
+  text-wrap: balance;
 }
 
 .h2 {
@@ -103,6 +108,7 @@ ul, ol {
   line-height: 1.12;
   font-weight: var(--fw-bold);
   letter-spacing: -0.025em;
+  text-wrap: balance;
 }
 
 .h3 {
@@ -122,6 +128,7 @@ ul, ol {
   font-size: 17px;
   line-height: 1.6;
   color: var(--color-muted);
+  text-wrap: pretty;
 }
 
 .text-muted {
@@ -161,7 +168,7 @@ ul, ol {
 }
 
 .panel-cell:hover {
-  background: #eef0ea;
+  background: #f4f0e7;
 }
 
 .panel-cell__line {
@@ -202,10 +209,10 @@ ul, ol {
 /* Reveal */
 .reveal {
   opacity: 0;
-  transform: translateY(12px);
+  transform: translateY(18px);
   transition:
-    opacity var(--dur-slow) var(--ease-standard),
-    transform var(--dur-slow) var(--ease-standard);
+    opacity var(--dur-reveal) var(--ease-standard),
+    transform var(--dur-reveal) var(--ease-standard);
 }
 
 .reveal.is-in {
@@ -226,9 +233,10 @@ ul, ol {
 
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
-  .reveal {
-    opacity: 1;
-    transform: none;
-    transition: none;
+  .reveal,
+  .hero__copy.reveal > * {
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
   }
 }

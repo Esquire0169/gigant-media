@@ -237,6 +237,62 @@
     window.addEventListener("resize", updateSticky);
   }
 
+  /* Ambient glows: two drifting gold lights per section */
+  const ambientHosts = [
+    ".hero",
+    ".campaigns-section",
+    ".audience-section",
+    ".services-section",
+    ".cases-section",
+    ".advantages",
+    ".process",
+    ".workshop-section",
+    ".about-section",
+    ".numbers",
+    ".reviews-section",
+    "#faq",
+    "#contacts",
+    ".page-hero",
+    ".calc-page",
+  ];
+  ambientHosts.forEach((sel, i) => {
+    const host = document.querySelector(sel);
+    if (!host || host.querySelector(".ambient-glow")) return;
+    const glow = document.createElement("div");
+    glow.className = "ambient-glow";
+    glow.setAttribute("aria-hidden", "true");
+    host.prepend(glow);
+    const alt = document.createElement("div");
+    alt.className = "ambient-glow ambient-glow--alt";
+    alt.setAttribute("aria-hidden", "true");
+    alt.style.animationDelay = `${-6 - (i % 4) * 5}s`;
+    host.prepend(alt);
+  });
+
+  /* Scrollspy: highlight the nav link for the section in view */
+  const navLinks = [...document.querySelectorAll('.nav a[href^="#"]')];
+  if (navLinks.length && "IntersectionObserver" in window) {
+    const byId = new Map(
+      navLinks
+        .map((link) => [link.getAttribute("href").slice(1), link])
+        .filter(([id]) => document.getElementById(id))
+    );
+    const setActive = (id) => {
+      navLinks.forEach((link) => {
+        link.classList.toggle("is-active", link === byId.get(id));
+      });
+    };
+    const spy = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) setActive(entry.target.id);
+        });
+      },
+      { rootMargin: "-40% 0px -55% 0px" }
+    );
+    byId.forEach((_, id) => spy.observe(document.getElementById(id)));
+  }
+
   /* Services carousel: drag + arrows + infinite loop */
   const carousel = document.querySelector("[data-services-carousel]");
   const track = document.querySelector("[data-services-track]");
